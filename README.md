@@ -25,3 +25,6 @@ php hard code, use http://www.responsivebreakpoints.com/ to generate responsive 
 <?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_728.jpg 728w"
 								src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_728.jpg"
 								alt="SmartRock2&trade;">
+
+# JS
+to keep same height of each div, write js to calculate the height and use the largest height.
