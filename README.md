@@ -28,3 +28,20 @@ php hard code, use http://www.responsivebreakpoints.com/ to generate responsive 
 
 # JS
 to keep same height of each div, write js to calculate the height and use the largest height.
+# JS
+<script>
+
+   jQuery(document).ready(function(){
+
+
+        jQuery('.bg_image').each(function(){
+            var highestBox = 0;
+            jQuery(this).find('.post .post_content').each(function () {
+                    if (jQuery(this).height() > highestBox) {
+                        highestBox = jQuery(this).height();
+                    }
+                }).height(highestBox);
+        });
+});
+
+</script>
