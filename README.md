@@ -47,5 +47,6 @@ to keep same height of each div, write js to calculate the height and use the la
 </script>
 # CSS stylesheet
 wordpress: <?php echo get_css_directory(); ?>
+example:
 <link rel="stylesheet" href="<?php echo get_css_directory(); ?>/sr2/animate.css?v=july272018348pm"/>
 
