@@ -28,6 +28,7 @@ php hard code, use http://www.responsivebreakpoints.com/ to generate responsive 
 
 # JS
 to keep same height of each div, write js to calculate the height and use the largest height.
+
 # JS 遍历+查找
 <script>
 
@@ -45,6 +46,50 @@ to keep same height of each div, write js to calculate the height and use the la
 });
 
 </script>
+# JS responsive change height and resize
++<script>
++
++function call(){
++    var w = jQuery(window).width();
++    if(w > 767) {
++
++        jQuery('.bg_image').each(function(){
++
++            // Cache the highest
++
++            var highestBox = 0;
++
++            // Select and loop the elements you want to equalise
++            jQuery(this).find('.post_content').each(function(){
++                jQuery(this).removeAttr('style');
++                // If this box is higher than the cached highest then store it
++                if(jQuery(this).height() > highestBox) {
++                    highestBox = jQuery(this).height();
++                }
++
++            }).height(highestBox);
++        });
++
++        // Select and loop the container element of the elements you want to equalise
++
++
++
++    }else{
++        jQuery('.bg_image .post_content').removeAttr('style');
++
++    }
++}
++            jQuery(document).ready(function(){
++                call();
++
++                jQuery(window).resize(function() {
++                   call();
++            });
++            });
++
++
++</script>
++
 # CSS stylesheet in Wordpress
 wordpress: <?php echo get_css_directory(); ?>
 example:
