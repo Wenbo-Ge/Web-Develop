@@ -50,3 +50,9 @@ wordpress: <?php echo get_css_directory(); ?>
 example:
 <link rel="stylesheet" href="<?php echo get_css_directory(); ?>/sr2/animate.css?v=july272018348pm"/>
 
+# CSS Selector
+<li ><a href="<?php echo site_url(); ?>/blog"><span class="breadcrumb-item active" aria-current="page">Blog</span></a></li>
+span.breadcrumb-item.active {
+           color: #368e47;
+       }
+
