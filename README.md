@@ -100,4 +100,12 @@ example:
 span.breadcrumb-item.active {
            color: #368e47;
        }
+       
+# CSS extend img to full width in a div
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    right: 50%;
+    margin-right: -50vw;
 
