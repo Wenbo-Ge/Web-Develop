@@ -108,4 +108,22 @@ span.breadcrumb-item.active {
     margin-left: -50vw;
     right: 50%;
     margin-right: -50vw;
+    
+# PHP
+put in the header.php
+ <?php
+    $postType = "company-news";
+    switch ($postType) {
+        case "company-news":
+            $meta = 'Keep up with all Giatec updates and exciting company news. These articles give you all the latest updates including trade shows, awards, contests, and more. Giatec was recently presented with Ottawa’s Fastest Growing Companies Award';
+            break;
+        case "press":
+            $meta = '';
+            break;
+        case "video":
+            $meta = '';
+            break;
+    }
+    ?>
+    <meta name="description" content="<?php echo $meta ?>"/>
 
