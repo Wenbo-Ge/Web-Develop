@@ -127,3 +127,17 @@ put in the header.php
     ?>
     <meta name="description" content="<?php echo $meta ?>"/>
 
+# GIT of BitBucket
+	1. check terminal: should be under giatec@mail:
+	2.git process:
+	  1.create new branch at PHP storm, checkout dev, update, create new branch.
+	  2.edit files and push at php storm
+	  3.go to bb copy the link to fetch and checkout at terminal
+	  4.git branch to check branch
+	  5.ever push at php storm, pull at terminal. if wrong, git reset --h. then git pull
+	  
+	3. create pull resquest, got to bb, branch to dev
+# Merge
+	1. checkout dev, update, merge branch into current,
+	2. regenerate scss, push.
+	3. terminal checkout dev and git pull
