@@ -138,6 +138,6 @@ put in the header.php
 	  
 	3. create pull resquest, got to bb, branch to dev
 # Merge
-	1. checkout dev, update, merge branch into current,
-	2. regenerate scss, push.
-	3. terminal checkout dev and git pull
+	1. checkout dev, update, 
+	2. right click on tab
+	3. Git, compare with Branch, choose local branch, and manully merge
