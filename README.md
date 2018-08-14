@@ -141,3 +141,6 @@ put in the header.php
 	1. checkout dev, update, 
 	2. right click on tab
 	3. Git, compare with Branch, choose local branch, and manully merge
+
+# CSS 
+	use min-width to avoid the line jump to second page when shrinks the screen size
