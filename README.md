@@ -145,8 +145,71 @@ put in the header.php
 # CSS 
 	use min-width to avoid the line jump to second page when shrinks the screen size
 	
-# UTM Builder
+# UTM Builder Javascript
+	<script>
+        function writeUtm(utm, name, html) {
+            if (utm) {
+                if (html[1] == 0) {
+                    html[0] += '?';
+                }
+                else {
+                    html[0] += '&';
+                }
+                html[0] += name + '=' + encodeURIComponent(utm);
+                html[1]++;
+            }
+            return html;
+        }
 
+        function updateOutput() {
+            var domain = $('#domain').val();
+            var utm_source = $('#source').val();
+            var utm_medium = $('#medium').val();
+            var utm_term = $('#term').val();
+            var utm_content = $('#content').val();
+            var utm_campaign = $('#name').val();
+            var utm_campaign_input = $('#name_input').val();
+
+            var html = [];
+            html[0] = domain;
+            html[1] = 0;
+
+            html = writeUtm(utm_source, 'utm_source', html);
+            html = writeUtm(utm_medium, 'utm_medium', html);
+            html = writeUtm(utm_term, 'utm_term', html);
+            html = writeUtm(utm_content, 'utm_content', html);
+            if (!utm_campaign_input) {
+                html = writeUtm(utm_campaign, 'utm_campaign', html);
+            } else {
+                html = writeUtm(utm_campaign_input, 'utm_campaign', html);
+
+            }
+
+
+            if (domain) {
+                $('#url').html(html[0].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"));
+            } else {
+                $('#url').html('');
+            }
+
+
+        }
+
+        $(function () {
+            $("form").bind("click keyup change", function (e) {
+                updateOutput();
+            });
+        });
+
+        function copyUrl() {
+            var copyText = document.getElementById("url");
+            copyText.select();
+            document.execCommand("copy");
+            // alert("Copied the text: " + copyText.value);
+        }
+
+    </script>
+	
 # CSS correct target:
 	use dev tool to hover the class,
 	div.class name.class name use space next level.class name
