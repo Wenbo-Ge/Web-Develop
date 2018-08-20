@@ -13,6 +13,7 @@ div > p : select all p where parent is a div
   }
 }
 screen size larger than 991px will display none
+main, 991px, 767px must include the same class name to do style at different width.
 # CSS responsive image
 php hard code, use http://www.responsivebreakpoints.com/ to generate responsive image
 <img
