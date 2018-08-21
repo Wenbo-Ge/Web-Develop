@@ -214,3 +214,6 @@ put in the header.php
 # CSS correct target:
 	use dev tool to hover the class,
 	div.class name.class name use space next level.class name
+	
+# duplicated meta descriptions and titles
+	at seo -> add %%page%% at description and title will solve this problem
