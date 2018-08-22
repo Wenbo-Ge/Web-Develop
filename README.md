@@ -217,3 +217,8 @@ put in the header.php
 	
 # duplicated meta descriptions and titles
 	at seo -> add %%page%% at description and title will solve this problem
+	
+# uncaught TypeError: $(...).tooltip is not a funciton Issue:
+	to solve this problem, first to find correct header.php file.
+	for example, at header-sr.php, $sr2page == 'concretematuritytool'
+	second, add <script src="https://code.jquery.com/ui/../jquery-ui.js"> just behind jquery.js
