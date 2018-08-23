@@ -222,3 +222,5 @@ put in the header.php
 	to solve this problem, first to find correct header.php file.
 	for example, at header-sr.php, $sr2page == 'concretematuritytool'
 	second, add <script src="https://code.jquery.com/ui/../jquery-ui.js"> just behind jquery.js
+	
+	or just delete the jquery.js(it may be called twice) 
