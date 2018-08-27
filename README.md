@@ -224,3 +224,9 @@ put in the header.php
 	second, add <script src="https://code.jquery.com/ui/../jquery-ui.js"> just behind jquery.js
 	
 	or just delete the jquery.js(it may be called twice) 
+	
+# useful tools to check website:
+	1.semrush
+	2.Search Console
+	3.gtmetrix
+	4.Google Analytics
