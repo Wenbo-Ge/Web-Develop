@@ -230,3 +230,6 @@ put in the header.php
 	2.Search Console
 	3.gtmetrix
 	4.Google Analytics
+
+# 301 re-direct:
+	/.../* => /.../.../*
