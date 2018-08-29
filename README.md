@@ -233,3 +233,7 @@ put in the header.php
 
 # 301 re-direct:
 	/.../* => /.../.../*
+
+# export live database to local
+	live phpmyAdmin -> export
+	local phpmyAdmin -> import
