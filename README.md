@@ -237,3 +237,6 @@ put in the header.php
 # export live database to local
 	live phpmyAdmin -> export
 	local phpmyAdmin -> import
+
+# SCSS and LESS syntax:
+	&.class-name {} => parallel with last class
