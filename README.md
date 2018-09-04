@@ -260,3 +260,6 @@ put in the header.php
 }
   and to call function in <img <?= awesome_acf_responsive_image($conten['image'][0]['id'],'thumb-640','640px'); ?>
 
+# wp get image alt description from the uploads
+	use <?php $image_alt=get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ?> to retrieve the alt information, then use alt="<?php echo !empty($image_alt) ? $image_alt : 'Construction of Concrete Wall with Formwork'?>" to display alt description
+	
