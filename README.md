@@ -264,5 +264,40 @@ put in the header.php
 	use <?php $image_alt=get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ?> to retrieve the alt information, then use alt="<?php echo !empty($image_alt) ? $image_alt : 'Construction of Concrete Wall with Formwork'?>" to display alt description
 	
 # wp add custom field
-
+	
 # wp add seo to a page
+
+# wp background-image set to be responsive, call different size when in different screen size
+	<?php
+        $imageFull = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
+        $imageLarge = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'large');
+        $imageMediumLarge = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'medium_large');
+
+        $imageFull = !empty($imageFull[0]) ? $imageFull[0] : '/wp-content/uploads/2018/09/boot.jpg';
+        $imageLarge = !empty($imagelarge[0]) ? $imagelarge[0] : $imageFull;
+        $imageMediumLarge = !empty($imageMediumLarge[0]) ? $imageMediumLarge[0] : $imageLarge;
+        ?>
+    <?php } else
+    {
+        $imageFull = !empty($imageFull) ? $imageFull : '/wp-content/uploads/2018/09/boot.jpg';
+        $imageLarge = !empty($imageLarge) ? $imageLarge : '/wp-content/uploads/2018/09/boot-1024x576.jpg';
+        $imageMediumLarge = !empty($imageMediumLarge) ? $imageMediumLarge : '/wp-content/uploads/2018/09/boot-768x432.jpg';
+    }
+    ?>
+    <style>
+        .header {
+            background-image: url(<?=$imageFull?>);
+        }
+
+        @media (max-width: 991px) {
+            .header {
+                background-image: url(<?=$imageLarge?>);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                background-image: url(<?=$imageMediumLarge?>);
+            }
+        }
+    </style>
