@@ -271,6 +271,8 @@ put in the header.php
 	5. add new field give field label and field name
 	6. field type can be anything
 	7. use wp function to call the data from field by using field_name
+	for example: 	$post_id = get_the_ID();
+			$company_logo = get_field('company_logo', $post_id);
 # wp add seo to a page
 
 # wp background-image set to be responsive, call different size when in different screen size
