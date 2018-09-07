@@ -264,7 +264,13 @@ put in the header.php
 	use <?php $image_alt=get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ?> to retrieve the alt information, then use alt="<?php echo !empty($image_alt) ? $image_alt : 'Construction of Concrete Wall with Formwork'?>" to display alt description
 	
 # wp add custom field
-	
+	1. go to Custom Fields
+	2. go to specific field groups
+	3. add new field give field label
+	4. field type should be tab
+	5. add new field give field label and field name
+	6. field type can be anything
+	7. use wp function to call the data from field by using field_name
 # wp add seo to a page
 
 # wp background-image set to be responsive, call different size when in different screen size
