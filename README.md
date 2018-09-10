@@ -274,6 +274,7 @@ put in the header.php
 	for example: 	$post_id = get_the_ID();
 			$company_logo = get_field('company_logo', $post_id);
 # wp add seo to a page
+	seo->search appearance->content types->choose the page need to be seo 
 
 # wp background-image set to be responsive, call different size when in different screen size
 	<?php
