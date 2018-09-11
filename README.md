@@ -310,3 +310,13 @@ put in the header.php
             }
         }
     </style>
+    
+ # Url Shortener
+ 	https://github.com/jmccartie/php-url-shortener
+	1.downlkoad code from github
+	2.do configuration on config.php
+	3.modify connect.php, create.php, index.php, view.php
+	4.if sql doesn't support, change sql into sqli
+	5.upload all files to server(must include .htaccess file)
+	6.type in url: A.Get Method: domin/create.php?url=...&pw=...
+		       B.Post Method:
