@@ -319,4 +319,9 @@ put in the header.php
 	4.if sql doesn't support, change sql into sqli
 	5.upload all files to server(must include .htaccess file)
 	6.type in url: A.Get Method: domin/create.php?url=...&pw=...
-		       B.Post Method:
+		       B.Post Method: 
+
+# FTP Configuration
+	1. set up ftp account in the server (Make sure the Directory is correct and identical the the phpstorm)
+	2. in phpstorm, tools -> deployment -> configuration -> + add new one -> choose typy to FTP -> FTP host (should be 	      server host) -> Root path(/ or try auto detect) -> user name and password (identical to server FTP account) ->              deployment path on server(/)
+	3. options: ctrl + s, automatic uploads
