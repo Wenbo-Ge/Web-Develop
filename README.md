@@ -325,3 +325,6 @@ put in the header.php
 	1. set up ftp account in the server (Make sure the Directory is correct and identical the the phpstorm)
 	2. in phpstorm, tools -> deployment -> configuration -> + add new one -> choose typy to FTP -> FTP host (should be 	      server host) -> Root path(/ or try auto detect) -> user name and password (identical to server FTP account) ->              deployment path on server(/)
 	3. options: ctrl + s, automatic uploads
+	
+# PHP add password to page
+	check view.php at giatec.net
