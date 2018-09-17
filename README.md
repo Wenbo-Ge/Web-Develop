@@ -328,3 +328,37 @@ put in the header.php
 	
 # PHP add password to page
 	check view.php at giatec.net
+	
+# js page crawler
+	var data = [];
+var timesRun = 0;
+var rand = Math.round(Math.random()*(8000-5000))+2000;
+var interval=window.setInterval(function () {
+    timesRun += 1;
+    if (timesRun === 1) {
+        clearInterval(interval);
+    }
+    jQuery(function ($) {
+    $("html").animate({scrollTop: $('button.search-results__pagination-next-button').offset().top}, 2000, function () {
+        var list = [];
+        jQuery('.search-results__result-item').each(function (index, element) {
+            list[index] = {};
+            var name = $(element).find("dt.result-lockup__name a.ember-view");
+            list[index]['First Name'] = $(name).text().split(' ')[12];
+            list[index]['Last Name'] = $(name).text().split(' ')[13];
+            var job_title = $(element).find('dd.result-lockup__highlight-keyword > span:first-child');
+            list[index]['Job Title'] = $(job_title).text();
+            var company_name = $(element).find('.horizontal-person-entity-lockup-4.result-lockup__entity.ml4 dd.result-lockup__highlight-keyword .result-lockup__position-company a > span:first-child');
+            list[index]['Company'] = $(company_name).text();
+            var location_name = $(element).find('ul.result-lockup__misc-list li.result-lockup__misc-item');
+            list[index]['Location'] = $(location_name).text();
+        });
+        var obj = {list};
+        data.push(obj);
+        console.log(JSON.stringify(data));
+ jQuery('button.search-results__pagination-next-button').trigger('click');
+    });
+
+});
+},rand);
+
