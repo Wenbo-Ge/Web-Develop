@@ -437,3 +437,5 @@ jQuery(function ($) {
     }, rand + rand2);
 });
 
+# Imac signature issue
+https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
