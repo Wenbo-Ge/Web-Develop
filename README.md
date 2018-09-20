@@ -319,7 +319,8 @@ put in the header.php
 	4.if sql doesn't support, change sql into sqli
 	5.upload all files to server(must include .htaccess file)
 	6.type in url: A.Get Method: domin/create.php?url=...&pw=...
-		       B.Post Method: 
+		       B.Post Method: ajax to do cross domain call from another the php file
+	7.js call is the most important one, check utm builder js
 
 # FTP Configuration
 	1. set up ftp account in the server (Make sure the Directory is correct and identical the the phpstorm)
@@ -442,3 +443,5 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # pdf share broken link at blog
 	wordpress post editor check <img width: 50 px> extra space causes this problem
+	
+	
