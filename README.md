@@ -444,4 +444,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # pdf share broken link at blog
 	wordpress post editor check <img width: 50 px> extra space causes this problem
 	
+# hubspot form issue:
+
 	
