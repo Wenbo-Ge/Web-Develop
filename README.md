@@ -445,5 +445,17 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	wordpress post editor check <img width: 50 px> extra space causes this problem
 	
 # hubspot form issue:
-
+<h3>Internal Lead Submission</h3>
+[/vc_column_text][vc_column_text]
+<div class="hubspot_internal hbspt-form"></div>
+<!-- [if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({
+	portalId: "something",
+	formId: "something",
+        target: ".hubspot_internal",
+});
+</script>[/vc_column_text][/vc_column][vc_column width="1/4"][/vc_column][/vc_row]
 	
