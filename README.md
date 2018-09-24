@@ -458,4 +458,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
         target: ".hubspot_internal",
 });
 </script>[/vc_column_text][/vc_column][vc_column width="1/4"][/vc_column][/vc_row]
-	
+
+# screen width capture issue
+	use Math.round($(document).width()) instead of Math.round($(window).width()) to capture the width of the screen, 	 this is more accurate
