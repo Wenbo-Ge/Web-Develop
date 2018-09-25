@@ -461,3 +461,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # screen width capture issue
 	use Math.round($(document).width()) instead of Math.round($(window).width()) to capture the width of the screen, 	 this is more accurate
+	
+# phpmyadmin database import issue
+
