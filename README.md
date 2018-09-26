@@ -471,3 +471,5 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	在社交媒体上发帖子，在上面建立反向链接
 	和其他网站交换友情链接
 
+# cookie script
+	https://cookieconsent.insites.com/
