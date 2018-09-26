@@ -462,5 +462,12 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # screen width capture issue
 	use Math.round($(document).width()) instead of Math.round($(window).width()) to capture the width of the screen, 	 this is more accurate
 	
-# phpmyadmin database import issue
+# backlink:
+	对于搜尋引擎最佳化（SEO）而言，反向链接能够使网站获得好的排名，所以，反向链接的好坏直接影响网站的整体权重和流量。
+	在论坛签名檔内加上网站名，发言时就会带上网站链接
+	创建博客，在更新的文章内加上网址
+	到各个相关门户投稿，并加上网站链接
+	在别人博客留言
+	在社交媒体上发帖子，在上面建立反向链接
+	和其他网站交换友情链接
 
