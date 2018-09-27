@@ -473,3 +473,14 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # cookie script
 	https://cookieconsent.insites.com/
+
+# array to string convertion ISSUE
+	check the function defination and usage,for example:
+	get_the_ters (int|object, string);
+	wp_get_post_terms(int,string|array);
+	use second function can solve the problem
+
+# certain webpage is slow
+	1.turn on the debug at wp.config,(some functions will still work and won't response the error message when debug is off); 
+	2.check function in that page, might have kind of array to string convertion issues that will slow down the page speed.
+	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
