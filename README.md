@@ -486,5 +486,48 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
 	
 # use url to filter the contents
-	hardcoded:
-	function:
+	hardcoded: 
+	<script>
+    $(document).ready(function () {
+        if ($(location).attr('href').indexOf("?filter=smart-concrete") != -1) {
+            $('button[data-filter=".smart-concrete"]').trigger('click');
+        } else {
+            if ($(location).attr('href').indexOf("?filter=smartrock") != -1) {
+                $('button[data-filter=".smartrock"]').trigger('click');
+            } else {
+                $('button[data-filter="all"]').trigger('click');
+            }
+        }
+    });
+	</script>
+	function 1: customize function
+	<script>
+	 $(function () {
+       var filter = getParameterByName('filter');
+        if (filter)
+           $('button[data-filter=".' + filter + '"]').trigger('click');
+     });
+     </script>
+     
+     getParameterByName('name') this function coded like this:
+     function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+	example: url is: https://www.giatecscientific.com/case-studies/?filter=smartrock
+			getParameterByName('filter') result should be smartrock;
+			
+	function 2: use js filter library build in function (library can be found at https://www.kunkalabs.com/tutorials/filtering-with-mixitup/) 
+	<script>
+    $(function () {
+        var filter = getParameterByName('filter');
+        if (filter) {
+            var mixer = mixitup('.mix-container');
+            mixer.filter('.' + filter);
+        }
+    });
+	</script>
+     
+	
