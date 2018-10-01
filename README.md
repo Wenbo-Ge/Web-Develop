@@ -500,6 +500,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
         }
     });
 	</script>
+	
 	function 1: customize function
 	<script>
 	 $(function () {
