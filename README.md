@@ -530,5 +530,11 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
         }
     });
 	</script>
-     
-	
+
+# Css Cursor:
+	cursor: grab;
+	cursor: point;
+	cursor: move;
+
+# slick animation(slider section: from small to large)
+		
