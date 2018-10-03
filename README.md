@@ -536,7 +536,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	cursor: point;
 	cursor: move;
 
-# slick animation(slider section: from small to large)
+# slick animation(slider section: from small to large) and postion of the section in animation:
 	
 	(small section): .slick-slide, .section_realtime.slick-slide {
   	-ms-transform: scale(.4);
