@@ -537,4 +537,29 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	cursor: move;
 
 # slick animation(slider section: from small to large)
-		
+	
+	(small section): .slick-slide, .section_realtime.slick-slide {
+  	-ms-transform: scale(.4);
+ 	 -webkit-transform: scale(.4);
+ 	 transform: scale(.4);
+ 	 opacity: 1;
+  	transform-origin: top;
+  	-ms-transform-origin: top;
+ 	 -webkit-transform-origin: top;
+  	outline: none;
+  	-webkit-transition: all 0.5s;
+  	transition: all 0.5s;
+ 	 opacity: .5;
+	}
+
+	(large section): .slick-slide.slick-current {
+ 	 -ms-transform: scale(1);
+ 	 -webkit-transform: scale(1);
+ 	 transform: scale(1);
+ 	 opacity: 1 !important;
+  	cursor: move;
+ 	 cursor: grab;
+ 	 cursor: -moz-grab;
+ 	 cursor: -webkit-grab;
+ 	 outline: none;
+	}
