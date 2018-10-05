@@ -563,3 +563,9 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
  	 cursor: -webkit-grab;
  	 outline: none;
 	}
+	
+# CSS Background :
+	background-position: can be top right; center; or 80% 90%
+
+# detect noscript(if browser turns off the javascript)
+	
