@@ -568,4 +568,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	background-position: can be top right; center; or 80% 90%
 
 # detect noscript(if browser turns off the javascript)
+	https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498
+
+# de-index page in robot.txt
 	
