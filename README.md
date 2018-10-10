@@ -571,4 +571,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498
 
 # de-index page in robot.txt
-	
+	User-agent: *
+	Disallow: /fetch-tweets.php
+	then, sss.com/fetch-tweets.php will be de-index.
+
+# change url without refresh the page
+	js: history.pushState(null, '' , '?filter=asda');
+	then
