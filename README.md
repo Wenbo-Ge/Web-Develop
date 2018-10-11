@@ -577,4 +577,9 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # change url without refresh the page
 	js: history.pushState(null, '' , '?filter=asda');
-	then
+	then ?filter=asda will be right after the url
+	
+# js hardcode to "smart code"  
+	
+	
+	
