@@ -579,7 +579,34 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	js: history.pushState(null, '' , '?filter=asda');
 	then ?filter=asda will be right after the url
 	
-# js hardcode to "smart code"  
+# js hardcode to "smart code"  (and how to select data-attribute in jquery)
+	hardcode:
+	$('[data-filter="all"]').click(function () {
+        $('.product_name').replaceWith('<span class="txt product_name">Products</span>');
+        $('.project_type_name').replaceWith('<span class="txt project_type_name">Project Types</span>');
+       history.pushState(null, '', '?filter=.all');
+  	 });
+
+    $('[data-filter=".smart-concrete"]').click(function () {
+       $('.product_name').replaceWith('<span class="txt product_name">Product: Smart Concrete</span>');
+       $('.project_type_name').replaceWith('<span class="txt project_type_name">Project Types</span>');
+        history.pushState(null, '', '?filter=smart-concrete');
+   	});
+
 	
-	
-	
+	smart code: 
+	$('.show_buttons button').click(function () {
+            var filter = $(this).data('filter');
+            var text = $(this).html();
+            $('.dropdown-filter .txt').each(function () {
+                $(this).html($(this).data('title'));
+            });
+            if(filter !== 'all') {
+                var prefix = $(this).parent().parent().find('.txt').data('prefix');
+                $(this).parent().parent().find('.txt').html(prefix+text);
+                history.pushState(null, '', '?filter=' + filter);
+            }else {
+                history.pushState(null,'', '');
+
+            }
+        });
