@@ -610,3 +610,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
             }
         });
+	
+# jQuery to check input check box
+	
