@@ -413,7 +413,7 @@ jQuery(function ($) {
                 list = [];
                 var name = $(element).find("dt.result-lockup__name a.ember-view");
                 list['first_name'] = $(name).text().split(' ')[12].trim();
-                list['last_name'] = $(name).text().split(' ')[13].trim();
+                list['last_name'] = $(name).text().split(' ')[13] == undefined ? '' : $(name).text().split(' ')[13].trim();
                 var job_title = $(element).find('dd.result-lockup__highlight-keyword > span:first-child');
                 list['job_title'] = $(job_title).text().trim();
                 var company_name = $(element).find('.horizontal-person-entity-lockup-4.result-lockup__entity.ml4 dd.result-lockup__highlight-keyword .result-lockup__position-company a > span:first-child');
