@@ -622,4 +622,21 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	jQuery(document).ready(function () {
 		call()
 	});
+	
+# jQuery click to scroll down 
+	jQuery(document).ready(function( $ ) {
+    $('.searchbychar').click(function () {
+        var srnavHeight = $('nav#srnav').height();
+        var height = srnavHeight + $('div#wpadminbar').height();
+
+        var divID = '#' + this.getAttribute('data-target');
+		if(srnavHeight>50)
+			height = height+70;
+            $('html, body').animate({
+                scrollTop: $(divID).offset().top - height
+            }, 1000);
+    });
+	});
  	
+# CSS Target IE and EDGE
+	
