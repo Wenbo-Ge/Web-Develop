@@ -639,7 +639,16 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	});
  	
 # CSS Target IE and EDGE
-
-# PHP Arg to query custom field group
+	https://gist.github.com/zunairmushtaq/aeaa48432d51cad0eb1c
+	ie : @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.selector { property:value; }
+	}
+	edge: @supports (-ms-ime-align:auto) { 
+		.selector { property:value; }
+	}
 	
-
+# PHP Arg to query custom field group (True/False type)
+	https://www.billerickson.net/code/wp_query-arguments/
+	https://www.advancedcustomfields.com/resources/true-false/
+	'meta_value' => '1' (true);
+	'meta_value' => '0' (false);
