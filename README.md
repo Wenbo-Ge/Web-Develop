@@ -387,25 +387,25 @@ put in the header.php
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-}
+	}
 
-jQuery(function ($) {
-    var data = [], list = [];
-    var rand = Math.round(Math.random() * (3000)) + 3000;
-    var rand2 = Math.round(Math.random() * (3000)) + 2000;
-    list['first_name'] = 'First Name';
-    list['last_name'] = 'Last Name';
-    list['job_title'] = 'Job Title';
-    list['company'] = 'Company';
-    list['location'] = 'Location';
-    list['domain'] = 'Domain';
-    list['contact_name'] = 'Contact Name';
-    list['campaign'] = 'Campaign';
-    list['rating'] = 'Rating';
-    list['country'] = 'Country';
-    list['state'] = 'State';
-    data.push(list);
-    var interval = window.setInterval(function () {
+	jQuery(function ($) {
+    	var data = [], list = [];
+   	 var rand = Math.round(Math.random() * (3000)) + 3000;
+    	var rand2 = Math.round(Math.random() * (3000)) + 2000;
+   	 list['first_name'] = 'First Name';
+   	 list['last_name'] = 'Last Name';
+    	list['job_title'] = 'Job Title';
+    	list['company'] = 'Company';
+    	list['location'] = 'Location';
+    	list['domain'] = 'Domain';
+   	 list['contact_name'] = 'Contact Name';
+    	list['campaign'] = 'Campaign';
+   	 list['rating'] = 'Rating';
+    	list['country'] = 'Country';
+    	list['state'] = 'State';
+    	data.push(list);
+    	var interval = window.setInterval(function () {
         rand = Math.round(Math.random() * (8000 - 5000)) + 3000;
         rand2 = Math.round(Math.random() * (8000 - 5000)) + 2000;
         $("html").animate({scrollTop: $(document).height() * 2}, rand2, function () {
@@ -436,7 +436,7 @@ jQuery(function ($) {
             }
         });
     }, rand + rand2);
-});
+	});
 
 # Imac signature issue
 https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
