@@ -652,3 +652,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	https://www.advancedcustomfields.com/resources/true-false/
 	'meta_value' => '1' (true);
 	'meta_value' => '0' (false);
+	
+# lazyload image
+	http://jquery.eisbehr.de/lazy/
