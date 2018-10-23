@@ -655,3 +655,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # lazyload image
 	http://jquery.eisbehr.de/lazy/
+	
+# html url is long that is out of screen when screen size is small
+	use css word-break: break-word,
+	then url will break into second line
+	
