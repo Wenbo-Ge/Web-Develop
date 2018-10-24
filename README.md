@@ -660,3 +660,11 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	use css word-break: break-word,
 	then url will break into second line
 	
+# bootstrap grid issue
+	if class name contains col-md-6 these kind of attributes,
+	need to add 'row' in parent div,
+	or before current class name;
+	EX: <div class="row">
+		<div class="col-md-6"></div>
+	    </div>
+	if missing "row", will have some issues to target in css.
