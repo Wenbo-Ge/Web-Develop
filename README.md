@@ -668,3 +668,9 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 		<div class="col-md-6"></div>
 	    </div>
 	if missing "row", will have some issues to target in css.
+	
+# Use custom field to controll form
+	build custom field to caputure form id,
+	use differnet id to call form to avoid hardcode.
+	
+# put php in js
