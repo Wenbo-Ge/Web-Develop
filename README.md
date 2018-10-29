@@ -674,3 +674,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	use differnet id to call form to avoid hardcode.
 	
 # put php in js
+	<script>
+	var form_id = '<?= !empty($stickyButtons[$key]['form_id']) ? $stickyButtons[$key]['form_id'] : "other else"?>';
+	target: form_id,
+	</script>
+# backgroud has two differnt color 
+	https://www.w3schools.com/colors/colors_gradient.asp
+	
