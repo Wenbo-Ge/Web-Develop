@@ -681,3 +681,9 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # backgroud has two differnt color 
 	https://www.w3schools.com/colors/colors_gradient.asp
 	
+# if dev appears at google search page
+	1. robots.txt: 
+		User-agent: *
+		Disallow: / or *
+	2. check url of appeared dev,
+		delete that index.html from server side
