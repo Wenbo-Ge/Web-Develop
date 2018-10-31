@@ -687,3 +687,33 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 		Disallow: / or *
 	2. check url of appeared dev,
 		delete that index.html from server side
+		
+# Css dialogue box
+	.dialogue-box {
+      position: relative;
+      max-width: 600px;
+      height: auto;
+      border: 2px solid #ffffff;
+      //margin: 100px auto;
+      padding: 15px;
+      box-sizing: border-box;
+	}
+
+
+	.dialogue-box:after {
+    content: "";
+     position: absolute;
+      width: 30px;
+      height: 30px;
+      border-top: 0px solid #ffffff;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      border-left: 0px solid #ffffff;
+      top:106%;
+      left: 70%;
+      margin-left: -25px;
+      content: '';
+      transform: rotate(45deg);
+      margin-top: -25px;
+      background: #0b9444;
+	}
