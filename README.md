@@ -717,3 +717,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
       margin-top: -25px;
       background: #0b9444;
 	}
+	
+# remove url from sitemap.xml
+	
