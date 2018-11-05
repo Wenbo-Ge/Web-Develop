@@ -239,8 +239,11 @@ put in the header.php
 	local phpmyAdmin -> import
 
 # SCSS and LESS syntax:
+	.claseName {
+	...
 	&.class-name {} => parallel with last class
-	
+	&:before/after
+	}
 # wp responsive image function:
 	function awesome_acf_responsive_image($image_id,$image_size,$max_width){
 
