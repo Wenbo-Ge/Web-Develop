@@ -720,6 +720,12 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
       margin-top: -25px;
       background: #0b9444;
 	}
+
+# CSS change for svg
+	Can dirctly add in-line style to svg tag:
+	<svg style="color: green"></svg>
+	
+# CSS hover en-large effect 
 	
 	
 	
