@@ -727,5 +727,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # CSS hover en-large effect 
 	
+# CSS fancy hover effect library
+	http://ianlunn.github.io/Hover/
 	
 	
