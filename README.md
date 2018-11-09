@@ -726,8 +726,13 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	<svg style="color: green"></svg>
 	
 # CSS hover en-large effect 
+	use transform: scale(1.1);
+	add large width and height will have some bad effect.
 	
 # CSS fancy hover effect library
 	http://ianlunn.github.io/Hover/
+	
+# CSS responsive @media min and grid
+	
 	
 	
