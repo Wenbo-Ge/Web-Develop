@@ -735,5 +735,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # CSS responsive @media min and grid
 	@media (min-width:1200px) {}, then @media (min-width: 991px) {}
 	col-sm-12, then col-md-6
+
 # fancy box library
+	https://fancyapps.com/fancybox/3/
+
+# vertical align middle method:
 	
+ 
