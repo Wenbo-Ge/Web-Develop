@@ -741,4 +741,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # vertical align middle method:
 	
+# slider in the laptop or mobile
+
  
