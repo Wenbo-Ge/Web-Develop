@@ -1,11 +1,16 @@
 # CSS stuff
 install sass to edit .scss files 
+when new .scss is created, need to add two css files which under .scss to git
+
 # CSS Selector
 div > p : select all p where parent is a div
+
 # Css Position
   position: static will put div next to the element in another div
+  
 # CSS and JS Cache Issue
   .css/.js?v=1:1, add <?= rand() ?> to the stylesheet link<> to clear the cache
+  
 # CSS Responsive
 @media (min-width:991) {
   .mobile_display {
@@ -14,6 +19,7 @@ div > p : select all p where parent is a div
 }
 screen size larger than 991px will display none
 main, 991px, 767px must include the same class name to do style at different width.
+
 # CSS responsive image
 php hard code, use http://www.responsivebreakpoints.com/ to generate responsive image
 <img
