@@ -748,5 +748,11 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # vertical align middle method:
 	
 # slider in the laptop or mobile
-
+	http://www.tinymill.com/Reference/RoyalSlider/slider-in-laptop/
+# slider inside slider, to make one slider section swipe-able
+	https://jsfiddle.net/WALKMAN5/0smp3kst/14/
+# Remove links from sitemap in wordpress
+	
+# change toolbar color for mobile browser
+	
  
