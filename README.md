@@ -752,7 +752,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # slider inside slider, to make one slider section swipe-able
 	https://jsfiddle.net/WALKMAN5/0smp3kst/14/
 # Remove links from sitemap in wordpress
-	
+	wp-admin: -> SEO search sppearance ->taxonomies -> Find the category -> set to no, hide
 # change toolbar color for mobile browser
-	
+	<meta name="theme-color" content="#007A3E"> in header
  
