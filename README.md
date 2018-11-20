@@ -755,4 +755,4 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	wp-admin: -> SEO search sppearance ->taxonomies -> Find the category -> set to no, hide
 # change toolbar color for mobile browser
 	<meta name="theme-color" content="#007A3E"> in header
- 
+ a
