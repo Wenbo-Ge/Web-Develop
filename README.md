@@ -746,6 +746,13 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	https://fancyapps.com/fancybox/3/
 
 # vertical align middle method:
+	1. padding: 20px 0;
+	2.<div style="display: table">
+		<div style="display: table-cell; vertical-algin:middle;">
+		</div>
+	  </div>
+	3. display: block; line-height:1.5; vertical-align: middle;
+	4. at outter div: display: flex; align-items: center;
 	
 # slider in the laptop or mobile
 	http://www.tinymill.com/Reference/RoyalSlider/slider-in-laptop/
@@ -755,4 +762,4 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	wp-admin: -> SEO search sppearance ->taxonomies -> Find the category -> set to no, hide
 # change toolbar color for mobile browser
 	<meta name="theme-color" content="#007A3E"> in header
- a
+ 
