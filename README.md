@@ -770,4 +770,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	require 'jazzAPI/jazz.php' use this path if they are in same dirctory
 	require './jazzAPI/jazz.php' need to find another dirctory
 
-#
+# wordpress function calls:
+	when calling the query_posts(), should end up with wp_reset_query()
+	
+# Anchor Scorll Down:
+	
