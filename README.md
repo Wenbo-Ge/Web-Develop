@@ -774,4 +774,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	when calling the query_posts(), should end up with wp_reset_query()
 	
 # Anchor Scorll Down:
+	https://codepen.io/jooleearr/pen/gpooKj
 	
+# External link target="_blank"
+	if open a new tab for an external link, should add rel="noopener" to the a tag like <a href="..." target="_blank" rel="noopener"></a>
