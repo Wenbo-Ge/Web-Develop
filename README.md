@@ -782,7 +782,14 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # CSS Background Blur
 	  filter: blur(8px);
   	  -webkit-filter: blur(8px);
+	  
 # Ubuntu low space on disk
 	1. sudo du -hx --max-depth=1/
 	2. sudo ls -la /root/.local/share/Trash/files
 	3. sudo rm -rf /root/.local/share/Trash
+	
+# Css z-index
+	
+# HTML table
+
+
