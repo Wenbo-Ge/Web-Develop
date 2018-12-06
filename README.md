@@ -789,7 +789,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	3. sudo rm -rf /root/.local/share/Trash
 	
 # Css z-index
-	
+	must use with position which is not static, otherwise, z-index won't work
 # HTML table
-
+	
 
