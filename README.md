@@ -790,6 +790,12 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # Css z-index
 	must use with position which is not static, otherwise, z-index won't work
+	
 # HTML table
+	<th colspan=""> colspan can take whole row in the table.
+	
+# hubspot form customization 
+	need to check hubspot api,
+	https://developers.hubspot.com/docs/methods/forms/advanced_form_options
 	
 
