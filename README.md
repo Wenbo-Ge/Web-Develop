@@ -797,5 +797,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # hubspot form customization 
 	need to check hubspot api,
 	https://developers.hubspot.com/docs/methods/forms/advanced_form_options
-	
+
+# hubspot form customizations:
+	Use JS to controll forms: check this page- 
 
