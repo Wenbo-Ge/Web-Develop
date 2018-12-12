@@ -801,3 +801,5 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # hubspot form customizations:
 	Use JS to controll forms: check this page- https://developers.hubspot.com/docs/methods/forms/advanced_form_options
 
+# Sync JazzHR posts to wordpress custom field:
+	
