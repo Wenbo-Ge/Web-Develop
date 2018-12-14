@@ -892,3 +892,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
         }
     }
 	}
+	
+# Css Center a whole dive when it doesn't have full width:
+	display: block;
+	float: none;
+	Margin: 0 auto;
