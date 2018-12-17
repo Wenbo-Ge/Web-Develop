@@ -897,3 +897,19 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	display: block;
 	float: none;
 	Margin: 0 auto;
+
+# PHP GET method:
+	in JS Post: 
+	jQuery.post("/wp-admin/admin-ajax.php?action=roi&step=1",
+                        {
+                            pv: jQuery('#pv').val(),
+                            unit: jQuery('#unit').val(),
+                            pn: jQuery('#pn').val(),
+                            first: jQuery('#first').val(),
+                            last: jQuery('#last').val(),
+                            email: jQuery('#email').val()
+                        },
+			....);
+	JQuery uses http GET.
+	In PHP, $_GET["step"]....
+	
