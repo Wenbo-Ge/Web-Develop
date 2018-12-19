@@ -913,4 +913,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	JQuery uses http GET.
 	In PHP, $_GET["step"]....
 
-# 
+# Bootstrap Grid
+	Order of the responsiveness(from large to small):
+	col-lg-12 col-md-12 col-sm-12 col-xs-12
+	
