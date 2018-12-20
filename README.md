@@ -917,3 +917,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	Order of the responsiveness(from large to small):
 	col-lg-12 col-md-12 col-sm-12 col-xs-12
 	
+# Bugs fix after server is upgraded to php 7.2
+	1. create_function
+	2. each
+	3. private login
