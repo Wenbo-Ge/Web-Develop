@@ -919,5 +919,20 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # Bugs fix after server is upgraded to php 7.2
 	1. create_function
+	   	a.custome_function.php
+	   	b.server=>wp-filebase->wp-filebase.php
 	2. each
+		a.server=>JS-composer-> class-vc-mapper.php
 	3. private login
+	
+	fixes: 1. add_filter("gform_confirmation_anchor", function() {return false;});
+
+		2. {
+        		return function($cl,$fnc) {$p=func_get_args(); return wpfb_call("' . $cl . '","' . $fnc . 				'",$p,true);};
+    		}
+
+	3. foreach( $this->init_activity as $object => $params)  {
+			list( $object, $method, $params ) = $params[1];
+
+
+	4. if(function_exists('pg_user_logged')) { }
