@@ -938,4 +938,22 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	4. if(function_exists('pg_user_logged')) { }
 
 # push Dev to live
+
+# validation before form submission
+	function validationCheck() {
+                            var phone_number = jQuery('inputID').val();
+                            jQuery.get(
+                                'http://apilayer.net/api/validate?access_key=....&number=' + phone_number, function (data) {
+                                    console.log(data.valid);
+                                    if (data.valid === false) {
+                                        alert('Your Phone Number is not valid!');
+                                    } else {
+                                        jQuery('formID')[0].submit();
+                                    }
+                                });
+                        }
+                        jQuery('body').on('click', 'formID input[type="submit"]', function (e) {
+                                        e.preventDefault();
+                                        validationCheck();
+                        });
 	
