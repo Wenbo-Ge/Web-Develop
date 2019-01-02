@@ -678,6 +678,29 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	    </div>
 	if missing "row", will have some issues to target in css.
 	
+	to make a whole div into different rows:
+	<div class="row">
+		<div class="container">
+			<div class="row row_1">
+				<div class="col-lg-12 col-md-12"></div>
+			</div>
+			<div class="row row_2">
+				<div class="col-lg-12 col-md-12"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container">
+			<div class="row row_1">
+				<div class="col-lg-12 col-md-12"></div>
+			</div>
+			<div class="row row_2">
+				<div class="col-lg-12 col-md-12"></div>
+			</div>
+		</div>
+	</div>
+	
+	
 # Use custom field to controll form
 	build custom field to caputure form id,
 	use differnet id to call form to avoid hardcode.
@@ -738,9 +761,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # CSS fancy hover effect library
 	http://ianlunn.github.io/Hover/
 	
-# CSS responsive @media min and grid
+# CSS responsive @media min
 	@media (min-width:1200px) {}, then @media (min-width: 991px) {}
-	col-sm-12, then col-md-6
 
 # fancy box library
 	https://fancyapps.com/fancybox/3/
