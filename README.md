@@ -978,6 +978,13 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
                                         e.preventDefault();
                                         validationCheck();
                         });
+
+# CSS selector (1,3,5; 2,4,6)
+
+	.class_name:nth-child(2n-1) {}
+	.class_name:nth-child(2n) {}
+	nth-child(): regardless type;
+	nth-of-type(): regard type
 	
 # landingPage form ID
 
