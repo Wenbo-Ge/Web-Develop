@@ -986,6 +986,12 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	nth-child(): regardless type;
 	nth-of-type(): regard type
 	
+# jQuery Error Issue (... is not function):
+	
+	for example: jQuery('..')[1].val() has error -> val is not function,
+	solution: try to use jQuery('')[1].value will solve the issue.
+	
+	
 # landingPage form ID
 
 # ROI Calculator
