@@ -937,7 +937,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # Bootstrap Grid
 	Order of the responsiveness(from large to small):
-	col-lg-12(width: >1200px) col-md-12(width: 991px) col-sm-12(width: >767px) 
+	col-lg-12(width: >1200px) col-md-12(width: less than 1200px) col-sm-12(width: less than 991px) 
 	
 # Bugs fix after server is upgraded to php 7.2
 	1. create_function
