@@ -992,7 +992,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	solution: try to use jQuery('')[1].value will solve the issue.
 	
 	
-
+# jQuery UI Drap and Drop
+	
+	https://codepen.io/benkalsky/pen/ByJawa
+	
 
 # HostGator
 
