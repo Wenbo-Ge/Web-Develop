@@ -960,7 +960,19 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	4. if(function_exists('pg_user_logged')) { }
 
 # push Dev to live
-
+     PHP:
+	1. Checkout origin/master as new local_master
+	2. Checkout local_master
+	3. Git pull
+	4. Merge other local branch to this local_master branch
+	5. ctrl+shift+k to push local_master
+     
+     Terminal:
+     	1. ssh admin@13.77.171.159 (password: need password for server)
+	2. cd /homeadmin/web/giatecscientific.com/public-html/wp_content/themes/twentyeleven
+	3. git branch to check if this head is at master branch
+	4. git pull (password for pull);
+	
 # validation before form submission
 	function validationCheck() {
                             var phone_number = jQuery('inputID').val();
