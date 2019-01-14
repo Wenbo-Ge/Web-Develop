@@ -1004,6 +1004,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 	https://codepen.io/benkalsky/pen/ByJawa
 	
+# Image Zoom in And Out With Mouse Move
+	
+# Equalise the height
+
 
 # HostGator
 
