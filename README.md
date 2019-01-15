@@ -1006,6 +1006,71 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # Image Zoom in And Out With Mouse Move
 	
+	https://codepen.io/ccrch/pen/yyaraz
+
+	<div class="tiles">
+                                <div width="711" height="378" class="tile"
+                                     data-image="<?php $url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 		'giatec-front-featured');
+                                     echo $url[0]; ?>" data-scale="2.4" alt="<?php the_title(); ?>">
+                                </div>
+                            </div>
+
+    <style>
+        .tiles {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            display: block;
+        }
+
+        .tile {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            transition: transform .5s ease-out;
+        }
+    </style>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('.tile')
+            // tile mouse actions
+                .on('mouseover', function () {
+                    $(this).children('.photo').css({'transform': 'scale(' + $(this).attr('data-scale') + ')'});
+                })
+                .on('mouseout', function () {
+                    $(this).children('.photo').css({'transform': 'scale(1)'});
+                })
+                .on('mousemove', function (e) {
+                    $(this).children('.photo').css({'transform-origin': ((e.pageX - $(this).offset().left) / $(this).width()) * 100 + '% ' + ((e.pageY - $(this).offset().top) / $(this).height()) * 100 + '%'});
+                })
+                // tiles set up
+                .each(function () {
+                    $(this)
+                    // add a photo container
+                        .append('<div class="photo"></div>')
+                        // set up a background image for each tile based on data-image attribute
+                        .children('.photo').css({'background-image': 'url(' + $(this).attr('data-image') + ')'});
+                })
+        });
+
+    </script>
+
+	https://stackoverflow.com/questions/33811041/javascript-zoom-in-on-mouseover-without-jquery-or-plugins
+	
 # Equalise the height
 
 
