@@ -1073,6 +1073,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # Equalise the height
 
+# Background Size
+	background-size: 100% 80% to customize the coverage of background
 
 # HostGator
 
