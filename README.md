@@ -1073,6 +1073,17 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	
 # Equalise the height
 
+	var highestBox = 0;
+        jQuery('.project_sum').find('p').each(function () {
+
+					jQuery(this).removeAttr('style');
+					// If this box is higher than the cached highest then store it
+					if (jQuery(this).height() > highestBox) {
+						highestBox = jQuery(this).height();
+					}
+
+				}).height(highestBox);
+				
 # Background Size
 	background-size: 100% 80% to customize the coverage of background
 
