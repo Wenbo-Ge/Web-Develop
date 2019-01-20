@@ -1086,6 +1086,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 				
 # Background Size
 	background-size: 100% 80% to customize the coverage of background
+	
+# Differnet image size to set equal height without changing image size ratio:
+	max-width: 100%;
+	height: specifc height(64px).
 
 # HostGator
 
