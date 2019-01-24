@@ -1000,7 +1000,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	solution: try to use jQuery('')[1].value will solve the issue.
 	
 	
-# jQuery UI Drap and Drop
+# jQuery UI Drag and Drop
 	
 	https://codepen.io/benkalsky/pen/ByJawa
 	
@@ -1136,6 +1136,9 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	font-size: 1em;
 	}
 	
+# Slider in effect
 
+	https://codepen.io/blondersholmvik/pen/BLKxZE
+	
 # HostGator
 
