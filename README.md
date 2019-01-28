@@ -1140,5 +1140,10 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 	https://codepen.io/blondersholmvik/pen/BLKxZE
 	
+# Slick Slider Customization
+
+	1. If slick arrow color cant be changed, try to change opacity, set opacity to 1.
+	2.
+	
 # HostGator
 
