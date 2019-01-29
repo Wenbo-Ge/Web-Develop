@@ -1143,7 +1143,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 # Slick Slider Customization
 
 	1. If slick arrow color cant be changed, try to change opacity, set opacity to 1.
-	2.
+	2. slick slider last slider half fade effect: 
 	
 # HostGator
 
