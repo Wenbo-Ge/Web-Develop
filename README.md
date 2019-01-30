@@ -810,6 +810,12 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	2. sudo ls -la /root/.local/share/Trash/files
 	3. sudo rm -rf /root/.local/share/Trash
 	
+	   To clear the backup files in Ubuntu
+	1. Terminal: cd /
+	2. cd backup
+	3. ls
+	4. sudo rm -r *
+	
 # Css z-index
 	must use with position which is not static, otherwise, z-index won't work
 	
