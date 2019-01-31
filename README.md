@@ -1173,5 +1173,78 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 			}
 		
 	
-# HostGator
+	3. slick slider two sides fade:
+		html:
+
+	<div class="col-lg-12 col-md-12 col-sm-12 display_img">
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/sarah_back.png" alt="Sarah on jobsite">
+	<!--                  <div class="overlay">-->
+	<!--    <div class="text">Sarah D on Jobsite, Ottawa</div>-->
+	<!--  </div>-->
+           	 </div>
+            	<div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site1.png" alt="SmartRock 		Sensor on Jobsite">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site2.png" alt="SmartRock 	Sensor on Jobsite">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site3.png" alt="SmartRock 	Sensor on Jobsite">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site4.png" alt="SmartRock 	Sensor on Jobsite">
+            </div>
+        </div>
+
+
+	css:
+
+      .display_img:after {
+      content: "";
+  	position: absolute;
+ 	 z-index: 1;
+ 	 width: 100%;
+  	top: 0;
+  	height: 100%;
+ 	 pointer-events: none;
+    }
+    .display_img:after {
+  	background: linear-gradient(to left, white, transparent 10%, transparent 90%, white 100%);
+	}
+
+	js:
+
+	$('.display_img').slick({
+  		dots: false,
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        centerPadding: '60px',
+        autoplay: false,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '100px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+	});
+
 
