@@ -1246,5 +1246,13 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
             }
         ]
 	});
+	
+	4. If slick slider box-shadow is missing:
+		solution: .slick-list {
+			padding: 25px 0;
+		}
+		give a padding to slick list that will make shadow visible again
+		
+
 
 
