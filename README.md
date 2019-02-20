@@ -1254,6 +1254,16 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 		give a padding to slick list that will make shadow visible again
 		
 
-# Move html page to hubspot landing page
+# JS call date :
+
+ 	var months    = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+	var now       = new Date();
+	var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
+	var thisDay = now.getDate();
+	var output1 = document.getElementById('mt');
+	var output2 = document.getElementById('d');
+
+    	output1.innerText = thisMonth;
+    	output2.innerText = thisDay;
 
 
