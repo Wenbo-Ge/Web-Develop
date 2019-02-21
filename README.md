@@ -1266,4 +1266,11 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
     	output1.innerText = thisMonth;
     	output2.innerText = thisDay;
 
-
+# FileZilla to connect to server:
+	Use SFTP:
+	1. host: should be ip address;
+	2. Username: should be username of the server;
+	3. Password: should be password of the server;
+	4. Port: 22
+	and then connect to server;
+	5. Choose local site which want to store the downloaded files and choose the remote site in the server.
