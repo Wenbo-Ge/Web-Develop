@@ -1174,6 +1174,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 		
 	
 	3. slick slider two sides fade:
+	![screenshot from 2019-02-25 09-35-28](https://user-images.githubusercontent.com/36894305/53344496-cfb3af00-38e0-11e9-8316-aadcfad7920a.png)
 		html:
 
 	<div class="col-lg-12 col-md-12 col-sm-12 display_img">
@@ -1353,3 +1354,161 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 						startQuote();
 				});
 	</script>
+	
+# Phone slider with bullet points"
+	html: 
+	<div class="col-lg-4 col-md-4 col-sm-6 right_img">
+            <div class="app_iphone">
+              <div class="app_iphone_screen iphone_slide_1">
+                  <div class="screen_item slide-1" data-slide-title="Live Overview">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_concrete_strength.jpg" alt="smartrock Wireless Concrete Temperature Sensor-Team"/>
+                  </div>
+                  <div class="screen_item slide-2" data-slide-title="Mix Calibrations">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_smartrock_sensor.jpg" alt="smartrock App Mix Calibrations"/>
+                  </div>
+                  <div class="screen_item slide-3" data-slide-title="Project Management">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_project_management.jpg" alt="smartrock App Project Management"/>
+                  </div>
+
+                  <div class="screen_item slide-4" data-slide-title="Data History">
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_concrete_data_history.jpg" alt="smartrock App Data History Strength Curve"/>
+                  </div>
+              </div>
+              <div class="app_iphone_device"></div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-4 bottom_txt app_features">
+            <p class="app_item active" data-slideindex="0">Live Overview</p>
+            <p class="app_item" data-slideindex="1">Mix Calibrations</p>
+            <p class="app_item" data-slideindex="2">Project Management</p>
+            <p class="app_item" data-slideindex="3">Data History</p>
+        </div>
+	
+	css: 
+          .right_img {
+          .app_iphone_device {
+            width: 397px;
+            height: 808px;
+            background: url(../../images/sr2/iphone.png) no-repeat;
+	  background-size: contain;
+	  z-index: 9;
+	  position: absolute;
+	  pointer-events: none;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%)
+	  }
+
+	.app_iphone {
+	    width: 397px;
+	    height: 808px;
+	  }
+
+	  .app_iphone_screen {
+	    position: absolute;
+	    top: 94px;
+	    left: 21px;
+	    width: 348px;
+	    height: 619px
+	  }
+
+	 .screen_item {
+	    width: 348px;
+	    height: 619px;
+	    display: inline-block
+	  }
+	    }
+	    .bottom_txt {
+	      padding-top: 50%;
+	      color: #1f8a5c;;
+	      position: relative;
+	      left: 50px;
+
+	      .app_item {
+	  opacity: .5;
+	  -webkit-transition: all .3s;
+	  transition: all .3s;
+	  -ms-transform: scale(.9);
+	  -webkit-transform: scale(.9);
+	  -webkit-transform-origin-x: 0;
+	  transform-origin-x: 0;
+	  -ms-transform-origin-x: 0;
+	  transform: scale(.9);
+	  text-align: left;
+	  cursor: context-menu;
+	   display: list-item;
+	  list-style-type: none;
+	  list-style-position: outside;
+	}
+	.app_item:hover {
+	  opacity: .8
+	}
+
+	.app_item.active {
+	  opacity: 1;
+	  -ms-transform: scale(1);
+	  -webkit-transform: scale(1);
+	  transform: scale(1);
+	  //&:before {
+	  //  content: '• ';
+	  //}
+	  list-style-type: disc;
+	}
+	    }
+
+	js:
+	$('.iphone_slide_1').slick({
+		  centerMode: true,
+		  centerPadding: '0%',
+		  slidesToShow: 1,
+		   dots: false,
+		   waitForAnimate: false,
+		   arrows: false,
+		   speed:400,
+		   variableWidth: true,
+		   autoplay: true,
+		   autoplaySpeed: 4000,
+		    responsive: [
+			    {
+			      breakpoint: 992,
+			      settings: {
+			        dots: false,
+		   			arrows: false,
+		   			slidesToShow: 3
+			      }
+			    }
+			  ]
+		});
+
+
+	assignSiblingClasses($(".slick-current"));
+    $(".app_iphone_screen").on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+        $('.app_item.active').removeClass('active');
+        $(".app_features").find("[data-slideindex='" + nextSlide + "']").addClass('active');
+    });
+    $(".app_iphone_screen").on("afterChange", function() {
+        if ($(".slick-cloned").hasClass("current-slide")) $(".slick-cloned").removeClass("current-slide")
+    });
+
+
+	$('.app_item').mouseover(function(){
+		$('.app_item.active').removeClass('active');
+		$(this).addClass('active');
+		var index = $(this).data('slideindex');
+		$('.app_iphone_screen').slick('slickGoTo',parseInt(index));
+	});
+
+
+	function assignSiblingClasses(target) {
+		var previousSlide = target.prev(".screen_item");
+		var nextSlide = target.next(".screen_item");
+		var outlierPreviousSlide = previousSlide.prev(".screen_item");
+		var outlierNextSlide = nextSlide.next(".screen_item");
+		var allPositionClasses = "current-slide sibling-slide outlier-slide slide-position-1";
+		target.removeClass(allPositionClasses).addClass("current-slide");
+		previousSlide.removeClass(allPositionClasses).addClass("sibling-slide");
+		nextSlide.removeClass(allPositionClasses).addClass("sibling-slide");
+		outlierPreviousSlide.removeClass(allPositionClasses).addClass("outlier-slide");
+		outlierNextSlide.removeClass(allPositionClasses).addClass("outlier-slide")
+		}
+
