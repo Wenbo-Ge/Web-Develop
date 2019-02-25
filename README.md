@@ -1,112 +1,110 @@
 # CSS stuff
-install sass to edit .scss files 
-when new .scss is created, need to add two css files which under .scss to git
+	install sass to edit .scss files 
+	when new .scss is created, need to add two css files which under .scss to git
 
 # CSS Selector
-div > p : select all p where parent is a div
+	div > p : select all p where parent is a div
 
 # Css Position
-  position: static will put div next to the element in another div
+  	position: static will put div next to the element in another div
   
 # CSS and JS Cache Issue
-  .css/.js?v=1:1, add <?= rand() ?> to the stylesheet link<> to clear the cache
+	  .css/.js?v=1:1, add <?= rand() ?> to the stylesheet link<> to clear the cache
   
 # CSS Responsive
-@media (min-width:991) {
-  .mobile_display {
-    display:none
-  }
-}
-screen size larger than 991px will display none
-main, 991px, 767px must include the same class name to do style at different width.
+	@media (min-width:991) {
+  	.mobile_display {
+    	display:none
+  	}
+	}
+	screen size larger than 991px will display none
+	main, 991px, 767px must include the same class name to do style at different width.
 
 # CSS responsive image
-php hard code, use http://www.responsivebreakpoints.com/ to generate responsive image
-<img
-								sizes="(max-width: 728px) 100vw, 728px"
-								srcset="
-<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_200.jpg 200w,
-<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_392.jpg 392w,
-<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_542.jpg 542w,
-<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_661.jpg 661w,
-<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_728.jpg 728w"
-								src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/product_smartrock_sz08nl_c_scale,w_728.jpg"
-								alt="SmartRock2&trade;">
+	php hard code, use http://www.responsivebreakpoints.com/ to generate responsive image
+	<img
+									sizes="(max-width: 728px) 100vw, 728px"
+									srcset="
+	<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_200.jpg 200w,
+	<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_392.jpg 392w,
+	<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_542.jpg 542w,
+	<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_661.jpg 661w,
+	<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_728.jpg 728w"
+									src="<?php echo get_template_directory_uri(); ?>/.../../product_smartrock_sz08nl_c_scale,w_728.jpg"
+									alt="SmartRock2&trade;">
 
-# JS
-to keep same height of each div, write js to calculate the height and use the largest height.
 
 # JS 遍历+查找
-<script>
+	<script>
 
-   jQuery(document).ready(function(){
+	   jQuery(document).ready(function(){
 
 
-        jQuery('.bg_image').each(function(){
-            var highestBox = 0;
-            jQuery(this).find('.post .post_content').each(function () {
-                    if (jQuery(this).height() > highestBox) {
-                        highestBox = jQuery(this).height();
-                    }
-                }).height(highestBox);
-        });
-});
+		jQuery('.bg_image').each(function(){
+		    var highestBox = 0;
+		    jQuery(this).find('.post .post_content').each(function () {
+			    if (jQuery(this).height() > highestBox) {
+				highestBox = jQuery(this).height();
+			    }
+			}).height(highestBox);
+		});
+	});
 
-</script>
+	</script>
 # JS responsive change height and resize
-+<script>
-+
-+function call(){
-+    var w = jQuery(window).width();
-+    if(w > 767) {
-+
-+        jQuery('.bg_image').each(function(){
-+
-+            // Cache the highest
-+
-+            var highestBox = 0;
-+
-+            // Select and loop the elements you want to equalise
-+            jQuery(this).find('.post_content').each(function(){
-+                jQuery(this).removeAttr('style');
-+                // If this box is higher than the cached highest then store it
-+                if(jQuery(this).height() > highestBox) {
-+                    highestBox = jQuery(this).height();
-+                }
-+
-+            }).height(highestBox);
-+        });
-+
-+        // Select and loop the container element of the elements you want to equalise
-+
-+
-+
-+    }else{
-+        jQuery('.bg_image .post_content').removeAttr('style');
-+
-+    }
-+}
-+            jQuery(document).ready(function(){
-+                call();
-+
-+                jQuery(window).resize(function() {
-+                   call();
-+            });
-+            });
-+
-+
-+</script>
-+
+	+<script>
+	+
+	+function call(){
+	+    var w = jQuery(window).width();
+	+    if(w > 767) {
+	+
+	+        jQuery('.bg_image').each(function(){
+	+
+	+            // Cache the highest
+	+
+	+            var highestBox = 0;
+	+
+	+            // Select and loop the elements you want to equalise
+	+            jQuery(this).find('.post_content').each(function(){
+	+                jQuery(this).removeAttr('style');
+	+                // If this box is higher than the cached highest then store it
+	+                if(jQuery(this).height() > highestBox) {
+	+                    highestBox = jQuery(this).height();
+	+                }
+	+
+	+            }).height(highestBox);
+	+        });
+	+
+	+        // Select and loop the container element of the elements you want to equalise
+	+
+	+
+	+
+	+    }else{
+	+        jQuery('.bg_image .post_content').removeAttr('style');
+	+
+	+    }
+	+}
+	+            jQuery(document).ready(function(){
+	+                call();
+	+
+	+                jQuery(window).resize(function() {
+	+                   call();
+	+            });
+	+            });
+	+
+	+
+	+</script>
+	+
 # CSS stylesheet in Wordpress
-wordpress: <?php echo get_css_directory(); ?>
-example:
-<link rel="stylesheet" href="<?php echo get_css_directory(); ?>/sr2/animate.css?v=july272018348pm"/>
+	wordpress: <?php echo get_css_directory(); ?>
+	example:
+	<link rel="stylesheet" href="<?php echo get_css_directory(); ?>/.../../animate.css?v=july272018348pm"/>
 
 # CSS Selector
-<li ><a href="<?php echo site_url(); ?>/blog"><span class="breadcrumb-item active" aria-current="page">Blog</span></a></li>
-span.breadcrumb-item.active {
-           color: #368e47;
-       }
+	<li ><a href="<?php echo site_url(); ?>/blog"><span class="breadcrumb-item active" aria-current="page">Blog</span></a></li>
+	span.breadcrumb-item.active {
+		   color: #368e47;
+	       }
        
 # CSS extend img to full width in a div
     width: 100vw;
@@ -116,38 +114,34 @@ span.breadcrumb-item.active {
     right: 50%;
     margin-right: -50vw;
     
-# PHP
-put in the header.php
- <?php
-    $postType = "company-news";
-    switch ($postType) {
-        case "company-news":
-            $meta = 'Keep up with all Giatec updates and exciting company news. These articles give you all the latest updates including trade shows, awards, contests, and more. Giatec was recently presented with Ottawa’s Fastest Growing Companies Award';
-            break;
-        case "press":
-            $meta = '';
-            break;
-        case "video":
-            $meta = '';
-            break;
-    }
-    ?>
-    <meta name="description" content="<?php echo $meta ?>"/>
+# PHP put meta to header:
+	put in the header.php
+	 <?php
+	    $postType = "company-news";
+	    switch ($postType) {
+		case "company-news":
+		    $meta = 'Keep up with all Giatec updates and exciting company news. These articles give you all the latest updates including trade shows, awards, contests, and more. Giatec was recently presented with Ottawa’s Fastest Growing Companies Award';
+		    break;
+		case "press":
+		    $meta = '';
+		    break;
+		case "video":
+		    $meta = '';
+		    break;
+	    }
+	    ?>
+	    <meta name="description" content="<?php echo $meta ?>"/>
 
-# GIT of BitBucket
-	1. check terminal: should be under giatec@mail:
+# GIT of BitBucket(on PHP storm)
+	1. create new branch: 
+	   a. check out local dev branch
+	   b. git->fetch from remote master branch
+	   c. merge remote master branch to local dev to make it up-to-date
+	   d. create new branch based on local dev
 	2.git process:
-	  1.create new branch at PHP storm, checkout dev, update, create new branch.
-	  2.edit files and push at php storm
-	  3.go to bb copy the link to fetch and checkout at terminal
-	  4.git branch to check branch
-	  5.ever push at php storm, pull at terminal. if wrong, git reset --h. then git pull
-	  
-	3. create pull resquest, got to bb, branch to dev
-# Merge
-	1. checkout dev, update, 
-	2. right click on tab
-	3. Git, compare with Branch, choose local branch, and manully merge
+	  a.git commit(before commit, need to manully add css file under newly created scss file)
+	  b.git push
+	3. create pull resquest, push to live, check PUSH DEV TO LIVE!
 
 # CSS 
 	use min-width to avoid the line jump to second page when shrinks the screen size
@@ -236,6 +230,7 @@ put in the header.php
 	2.Search Console
 	3.gtmetrix
 	4.Google Analytics
+	5.https://tools.pingdom.com/
 
 # 301 re-direct:
 	/.../* => /.../.../*
@@ -266,8 +261,8 @@ put in the header.php
 		echo 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
 
 	}
-}
-  and to call function in <img <?= awesome_acf_responsive_image($conten['image'][0]['id'],'thumb-640','640px'); ?>
+	}
+  	and to call function in <img <?= awesome_acf_responsive_image($conten['image'][0]['id'],'thumb-640','640px'); ?>
 
 # wp get image alt description from the uploads
 	use <?php $image_alt=get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ?> to retrieve the alt information, then use alt="<?php echo !empty($image_alt) ? $image_alt : 'Construction of Concrete Wall with Formwork'?>" to display alt description
@@ -448,25 +443,25 @@ put in the header.php
 	});
 
 # Imac signature issue
-https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
+	https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # pdf share broken link at blog
 	wordpress post editor check <img width: 50 px> extra space causes this problem
 	
 # hubspot form issue:
-<h3>Internal Lead Submission</h3>
-[/vc_column_text][vc_column_text]
-<div class="hubspot_internal hbspt-form"></div>
-<!-- [if lte IE 8]>
-<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-<![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-<script>
-  hbspt.forms.create({
-	portalId: "something",
-	formId: "something",
-        target: ".hubspot_internal",
-});
-</script>[/vc_column_text][/vc_column][vc_column width="1/4"][/vc_column][/vc_row]
+	<h3>Internal Lead Submission</h3>
+	[/vc_column_text][vc_column_text]
+	<div class="hubspot_internal hbspt-form"></div>
+	<!-- [if lte IE 8]>
+	<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+	<![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+	<script>
+	  hbspt.forms.create({
+		portalId: "something",
+		formId: "something",
+		target: ".hubspot_internal",
+	});
+	</script>[/vc_column_text][/vc_column][vc_column width="1/4"][/vc_column][/vc_row]
 
 # screen width capture issue
 	use Math.round($(document).width()) instead of Math.round($(window).width()) to capture the width of the screen, 	 this is more accurate
@@ -485,7 +480,7 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 # array to string convertion ISSUE
 	check the function defination and usage,for example:
-	get_the_ters (int|object, string);
+	get_the_terms (int|object, string);
 	wp_get_post_terms(int,string|array);
 	use second function can solve the problem
 
@@ -682,20 +677,20 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	<div class="row">
 		<div class="container">
 			<div class="row row_1">
-				<div class="col-lg-12 col-md-12"></div>
+				<div class="col-lg-6 col-md-6"></div>
 			</div>
 			<div class="row row_2">
-				<div class="col-lg-12 col-md-12"></div>
+				<div class="col-lg-6 col-md-6"></div>
 			</div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="container">
 			<div class="row row_1">
-				<div class="col-lg-12 col-md-12"></div>
+				<div class="col-lg-6 col-md-6"></div>
 			</div>
 			<div class="row row_2">
-				<div class="col-lg-12 col-md-12"></div>
+				<div class="col-lg-6 col-md-6"></div>
 			</div>
 		</div>
 	</div>
@@ -776,8 +771,6 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	3. display: block; line-height:1.5; vertical-align: middle;
 	4. at outter div: display: flex; align-items: center;
 	
-# slider in the laptop or mobile
-	http://www.tinymill.com/Reference/RoyalSlider/slider-in-laptop/
 	
 # slider inside slider, to make one slider section swipe-able
 	https://jsfiddle.net/WALKMAN5/0smp3kst/14/
@@ -970,8 +963,8 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 	5. ctrl+shift+k to push local_master
      
      Terminal:
-     	1. ssh admin@13.77.171.159 (password: need password for server)
-	2. cd /homeadmin/web/giatecscientific.com/public-html/wp_content/themes/twentyeleven
+     	1. ssh admin@xx.xx.xxx.xxx (password: need password for server)
+	2. cd /home/admin/web/giatecscientific.com/public-html/wp_content/themes/twentyeleven
 	3. git branch to check if this head is at master branch
 	4. git pull (password for pull);
 	
@@ -1179,22 +1172,22 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
 
 	<div class="col-lg-12 col-md-12 col-sm-12 display_img">
             <div class="slider">
-                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/sarah_back.png" alt="Sarah on jobsite">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../sarah_back.png" alt="Sarah on jobsite">
 	<!--                  <div class="overlay">-->
 	<!--    <div class="text">Sarah D on Jobsite, Ottawa</div>-->
 	<!--  </div>-->
            	 </div>
             	<div class="slider">
-                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site1.png" alt="SmartRock 		Sensor on Jobsite">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../job_site1.png" alt="SmartRock 		Sensor on Jobsite">
             </div>
             <div class="slider">
-                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site2.png" alt="SmartRock 	Sensor on Jobsite">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../job_site2.png" alt="SmartRock 	Sensor on Jobsite">
             </div>
             <div class="slider">
-                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site3.png" alt="SmartRock 	Sensor on Jobsite">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../job_site3.png" alt="SmartRock 	Sensor on Jobsite">
             </div>
             <div class="slider">
-                <img src="<?php echo get_template_directory_uri(); ?>/templates-giatec/images/job_site4.png" alt="SmartRock 	Sensor on Jobsite">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../job_site4.png" alt="SmartRock 	Sensor on Jobsite">
             </div>
         </div>
 
@@ -1361,17 +1354,17 @@ https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
             <div class="app_iphone">
               <div class="app_iphone_screen iphone_slide_1">
                   <div class="screen_item slide-1" data-slide-title="Live Overview">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_concrete_strength.jpg" alt="smartrock Wireless Concrete Temperature Sensor-Team"/>
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/.../../app_concrete_strength.jpg" alt="smartrock Wireless Concrete Temperature Sensor-Team"/>
                   </div>
                   <div class="screen_item slide-2" data-slide-title="Mix Calibrations">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_smartrock_sensor.jpg" alt="smartrock App Mix Calibrations"/>
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/.../../app_smartrock_sensor.jpg" alt="smartrock App Mix Calibrations"/>
                   </div>
                   <div class="screen_item slide-3" data-slide-title="Project Management">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_project_management.jpg" alt="smartrock App Project Management"/>
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/.../../app_project_management.jpg" alt="smartrock App Project Management"/>
                   </div>
 
                   <div class="screen_item slide-4" data-slide-title="Data History">
-                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/sr2/app_concrete_data_history.jpg" alt="smartrock App Data History Strength Curve"/>
+                      <img src="<?php echo get_stylesheet_directory_uri(); ?>/.../../app_concrete_data_history.jpg" alt="smartrock App Data History Strength Curve"/>
                   </div>
               </div>
               <div class="app_iphone_device"></div>
