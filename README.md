@@ -146,70 +146,189 @@
 # CSS 
 	use min-width to avoid the line jump to second page when shrinks the screen size
 	
-# UTM Builder Javascript
+# UTM Builder with URL Shortener
+	
+	html:
+
+	<h2>1) Create <abbr title="Uniform Resource Locator">URL</abbr></h2>
+	Fill in the form to create your custom <abbr title="Uniform Resource Locator">URL</abbr>.
+
+	<form action="">
+	<fieldset><label for="domain"><abbr title="Uniform Resource Locator">URL</abbr><input id="domain" name="domain" type="url" value="" placeholder="Enter the link for the website" /></label>
+
+	<label for="source">Campaign Source <strong>*Where is my link going to be?*</strong><select id="source" name="source">
+	<option disabled="disabled" selected="selected">Select One</option>
+	<option>Bing</option>
+	<option>Direct Contact</option>
+	<option>Email Campaign</option>
+	<option>Facebook</option>
+	<option>Fax</option>
+	<option>Google Ads</option>
+	<option>Inbound Referral</option>
+	<option>Instagram</option>
+	<option>LinkedIn</option>
+	<option>Organic</option>
+	<option>Outbound Referral</option>
+	<option>Print Media</option>
+	<option>Prospecting</option>
+	<option>Quora</option>
+	<option>Trade Show</option>
+	<option>Twitter</option>
+	<option>Vimeo</option>
+	<option>YouTube</option>
+	</select>
+	</label>
+
+	<label for="medium">Campaign Medium <strong>*What medium am I using to share the link?*</strong><select id="medium" name="medium">
+	<option disabled="disabled" selected="selected">Select One</option>
+	<option>email</option>
+	<option>fax</option>
+	<option>organic</option>
+	<option>social</option>
+	<option>display ad</option>
+	<option>search ad</option>
+	<option>video ad</option>
+	</select></label>
+
+	<label for="name">Select Campaign Name <strong>*Which campaign is this link part of?*</strong> (Optional)<select id="name" name="name">
+	<option disabled="disabled" selected="selected">Select One</option>
+	<option>BlueRock</option>
+	<option>iCOR</option>
+	<option>NDT+Promo</option>
+	<option>Smart Concrete eBook</option>
+	<option>SmartRock</option>
+	<option>SmartRock Starter Pack</option>
+	<option>Cold Weather</option>
+	<option>Maturity e-Book</option>
+	</select></label>
+
+	<label for="name">Or Enter Campaign Name (Optional)<input id="name_input" name="name_input" type="text" value="" placeholder="Enter a name to identify the campaign" /></label>
+
+	<label for="content">Campaign Content <strong>*What will the person be clicking on?*</strong>(Optional)<select id="content" name="content">
+	<option disabled="disabled" selected="selected">Select One</option>
+	<option>Blog Post</option>
+	<option>Product Page</option>
+	<option>Case Study</option>
+	<option>CTA</option>
+	<option>Group Post</option>
+	<option>Comment</option>
+	</select></label>
+
+	<label for="content">Campaign Content (Optional)<input id="input_content" name="input_content" type="text" value="" placeholder="Enter something to differentiate ads" /></label>
+
+	<label for="term">Campaign Term (Optional)<input id="term" name="term" type="text" value="" placeholder="Enter the paid keyword" /></label></fieldset>
+	</form>
+	<h2>2) Copy and Paste</h2>
+	<div id="html" class="output">
+
+	&nbsp;
+
+	</div>
+	<h2>3) Shorten Url</h2>
+	<button id="shorten" type="button">Shorten URL</button>
+	<div id="html" class="output">
+
+	<label for="url">Click in the box to copy your link<textarea id="url_short" class="auto" style="background: #f1f1f1;" placeholder="Code will appear here after click the button"></textarea></label>
+
+	</div>
+
+	js:
+
 	<script>
-        function writeUtm(utm, name, html) {
-            if (utm) {
-                if (html[1] == 0) {
-                    html[0] += '?';
-                }
-                else {
-                    html[0] += '&';
-                }
-                html[0] += name + '=' + encodeURIComponent(utm);
-                html[1]++;
-            }
-            return html;
-        }
+	    function writeUtm(utm, name, html) {
+		if (utm) {
+		    if (html[1] == 0) {
+			html[0] += '?';
+		    }
+		    else {
+			html[0] += '&';
+		    }
+		    html[0] += name + '=' + encodeURIComponent(utm);
+		    html[1]++;
+		}
+		return html;
+	    }
 
-        function updateOutput() {
-            var domain = $('#domain').val();
-            var utm_source = $('#source').val();
-            var utm_medium = $('#medium').val();
-            var utm_term = $('#term').val();
-            var utm_content = $('#content').val();
-            var utm_campaign = $('#name').val();
-            var utm_campaign_input = $('#name_input').val();
+	    function updateOutput() {
+		var domain = $('#domain').val();
+		var utm_source = $('#source').val();
+		var utm_medium = $('#medium').val();
+		var utm_term = $('#term').val();
+		var utm_content = $('#content').val();
+		var utm_content_input = $('#input_content').val();
+		var utm_campaign = $('#name').val();
+		var utm_campaign_input = $('#name_input').val();
 
-            var html = [];
-            html[0] = domain;
-            html[1] = 0;
+		var html = [];
+		html[0] = domain;
+		html[1] = 0;
 
-            html = writeUtm(utm_source, 'utm_source', html);
-            html = writeUtm(utm_medium, 'utm_medium', html);
-            html = writeUtm(utm_term, 'utm_term', html);
-            html = writeUtm(utm_content, 'utm_content', html);
-            if (!utm_campaign_input) {
-                html = writeUtm(utm_campaign, 'utm_campaign', html);
-            } else {
-                html = writeUtm(utm_campaign_input, 'utm_campaign', html);
+		html = writeUtm(utm_source, 'utm_source', html);
+		html = writeUtm(utm_medium, 'utm_medium', html);
+		html = writeUtm(utm_term, 'utm_term', html);
 
-            }
+		if (!utm_campaign_input) {
+		    html = writeUtm(utm_campaign, 'utm_campaign', html);
+		} else {
+		    html = writeUtm(utm_campaign_input, 'utm_campaign', html);
+
+		}
+
+		if (!utm_content_input) {
+		    html = writeUtm(utm_content, 'utm_content', html);
+		} else {
+		    html = writeUtm(utm_content_input, 'utm_content', html);
+		}
 
 
-            if (domain) {
-                $('#url').html(html[0].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"));
-            } else {
-                $('#url').html('');
-            }
+		if (domain) {
+		    $('#url').html(html[0].replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"));
+		} else {
+		    $('#url').html('');
+		}
 
 
-        }
+	    }
 
-        $(function () {
-            $("form").bind("click keyup change", function (e) {
-                updateOutput();
-            });
-        });
+	    $(function () {
+		$("form").bind("click keyup change", function (e) {
+		    updateOutput();
+		});
+	    });
 
-        function copyUrl() {
-            var copyText = document.getElementById("url");
-            copyText.select();
-            document.execCommand("copy");
-            // alert("Copied the text: " + copyText.value);
-        }
+	    function validateText(str)
+	    {
+	   var tarea = str;
+	   if (tarea.indexOf("http://") == -1 && tarea.indexOf("https://") == -1) {
+		    return 'http://'+ tarea;
+		} else {
+		    return tarea;
+		}
+	    }
 
-    </script>
+	    $('#shorten').click(function (e) {
+		e.preventDefault();
+		var url_long = $('#url').val();
+		var url_full = validateText(url_long);
+		$.post('https://giatec.net/create.php',
+		    {data: url_full},
+		    function (data) {
+			var dataUrl = JSON.parse(data);
+			$('#url_short').html(dataUrl.shortUrl);
+
+		    });
+	    });
+
+	    function copyUrl() {
+		var copyText = document.getElementById("url_short");
+		copyText.select();
+		document.execCommand("copy");
+		// alert("Copied the text: " + copyText.value);
+	    }
+
+	</script>
+
+	see url shortener...
 	
 # CSS correct target:
 	use dev tool to hover the class,
