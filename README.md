@@ -1660,3 +1660,15 @@
                 <?php endwhile; ?>
             <?php endif;
             wp_reset_query(); ?>
+
+# Use URL to jump to certain section
+	https://css-tricks.com/hash-tag-links-padding/
+
+	html: <span id="test">&nbsp;</span>
+	css: #test {
+		      margin-top: -300px;        /* Size of fixed header */
+		      padding-bottom: 300px;
+		      display: block;
+		}
+
+	url: ../../#test will jump to test section
