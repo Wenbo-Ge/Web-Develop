@@ -1672,3 +1672,18 @@
 		}
 
 	url: ../../#test will jump to test section
+	
+
+# Clone bitbucket repository to php storm and configure the deployment:
+
+	1. In Bitbucket: clone the repository(clone the link).
+	2. In phpstorm: menu->vcs->checkout from verson control->git->paste BB url(Dirctory: /phpstomProjects)
+	3. Menu: Tools->Deployment->configuration,
+		 type SFTP,
+		 SFTP host: server ip, port:22
+		 Root Path: /home/giatec/web/wenbo.giatecscientific.com/public_html/landingpage  (this is put under wordpress package)
+		 user name: namefor server
+		 password: name for password
+		 mappings: deployment path:/
+	4. Tools->Deployment->options->ctrl+s/upload external changes
+	5. upload local file to server
