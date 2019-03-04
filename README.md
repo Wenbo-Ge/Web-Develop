@@ -1687,3 +1687,11 @@
 		 mappings: deployment path:/
 	4. Tools->Deployment->options->ctrl+s/upload external changes
 	5. upload local file to server
+
+# Server Knowledge:
+	1. Setup Server:
+		a.setup aws account
+		b.follow this link (https://www.nginx.com/blog/setting-up-nginx/#open-web-page) to setup ubuntu instance in 			the server;
+		c.install vestacp to the ubuntu instance in server: follow this link (https://www.clickittech.com/control-			panels/install-vestacp-aws/)(https://vestacp.com/install/)
+		d.configure vestacp: edit USER, set password
+		e.use filezilla to upload file to server (ip:xx.xx.xxx.xx; username:admin; password:xxx)
