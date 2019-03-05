@@ -1695,3 +1695,6 @@
 		c.install vestacp to the ubuntu instance in server: follow this link (https://www.clickittech.com/control-			panels/install-vestacp-aws/)(https://vestacp.com/install/)
 		d.configure vestacp: edit USER, set password
 		e.use filezilla to upload file to server (ip:xx.xx.xxx.xx; username:admin; password:xxx)
+		
+# AWS how to increase volumn:
+	https://stackoverflow.com/questions/6151695/ec2-instance-on-amazon-and-i-am-greeted-with-no-space-left-on-the-disk
