@@ -1722,3 +1722,5 @@
 				     domain in godaddy: wenboge.ca;
 		b. Pointing domain name to ip in godaddy:
 		https://gethelp.wildapricot.com/en/articles/549-changing-your-dns-settings-to-point-to-a-different-ip-address
+		
+# New Start
