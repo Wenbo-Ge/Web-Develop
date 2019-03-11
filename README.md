@@ -1724,3 +1724,6 @@
 		https://gethelp.wildapricot.com/en/articles/549-changing-your-dns-settings-to-point-to-a-different-ip-address
 		
 # New Start
+	1. start new instance to store self-driven project
+	2. configure server and database
+	
