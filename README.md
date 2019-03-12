@@ -1714,7 +1714,7 @@
 
 	4. configure domain: a. add new web in vesta
 			     b. move all files under public_html to new web's public_html
-				sudo mv /home/admin/web/dev.giatecscientific.com/public_html/* /home/admin/web/wenboge.ca/public_html
+				sudo mv /home/admin/web/wenboge.ca/public_html/* /home/admin/web/xxxxx/public_html
 			     c. update DB password
 	5. point domain to new IP:
 		a. In vestacp: the domain should be identical to godaddy domain
