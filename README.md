@@ -1727,3 +1727,6 @@
 	1. start new instance to store self-driven project
 	2. configure server and database
 	
+# Wordpress template
+	https://themeforest.net/
+	
