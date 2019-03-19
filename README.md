@@ -139,3 +139,17 @@
              echo '<meta name="description" content="adlkjakljdlkajkdla. '.(($paged>1)?' page '.$paged:'').'"/>';
          }
          ?>
+	 
+# GIT of BitBucket(on PHP storm)
+	1. create new branch: 
+	   a. check out local dev branch
+	   b. git->fetch from remote master branch
+	   c. merge remote master branch to local dev to make it up-to-date
+	   d. create new branch based on local dev
+	2.git process:
+	  a.git commit(before commit, need to manully add css file under newly created scss file)
+	  b.git push
+	3. create pull resquest, push to live, check PUSH DEV TO LIVE!
+
+# CSS 
+	use min-width to avoid the line jump to second page when shrinks the screen size
