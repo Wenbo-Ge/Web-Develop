@@ -354,3 +354,73 @@
 	&.class-name {} => parallel with last class
 	&:before/after
 	}
+	
+# wp responsive image function:
+	function awesome_acf_responsive_image($image_id,$image_size,$max_width){
+
+	// check the image ID is not blank
+	if($image_id != '') {
+
+		// set the default src image size
+		$image_src = wp_get_attachment_image_url( $image_id, $image_size );
+
+		// set the srcset with various image sizes
+		$image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+
+		// generate the markup for the responsive image
+		echo 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="(max-width: '.$max_width.') 100vw, '.$max_width.'"';
+
+	}
+	}
+  	and to call function in <img <?= awesome_acf_responsive_image($conten['image'][0]['id'],'thumb-640','640px'); ?>
+
+# wp get image alt description from the uploads
+	use <?php $image_alt=get_post_meta(get_post_thumbnail_id( $post->ID ), '_wp_attachment_image_alt', true) ?> to retrieve the alt information, then use alt="<?php echo !empty($image_alt) ? $image_alt : 'asjkhd'?>" to display alt description
+	
+# wp add custom field
+	1. go to Custom Fields
+	2. go to specific field groups
+	3. add new field give field label
+	4. field type should be tab
+	5. add new field give field label and field name
+	6. field type can be anything
+	7. use wp function to call the data from field by using field_name
+	for example: 	$post_id = get_the_ID();
+			$company_logo = get_field('company_logo', $post_id);
+# wp add seo to a page
+	seo->search appearance->content types->choose the page need to be seo 
+
+# wp background-image set to be responsive, call different size when in different screen size
+	<?php
+        $imageFull = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
+        $imageLarge = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'large');
+        $imageMediumLarge = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'medium_large');
+
+        $imageFull = !empty($imageFull[0]) ? $imageFull[0] : 'default image';
+        $imageLarge = !empty($imagelarge[0]) ? $imagelarge[0] : $imageFull;
+        $imageMediumLarge = !empty($imageMediumLarge[0]) ? $imageMediumLarge[0] : $imageLarge;
+        ?>
+    <?php } else
+    {
+        $imageFull = !empty($imageFull) ? $imageFull : 'default image';
+        $imageLarge = !empty($imageLarge) ? $imageLarge : 'default image';
+        $imageMediumLarge = !empty($imageMediumLarge) ? $imageMediumLarge : 'default image';
+    }
+    ?>
+    <style>
+        .header {
+            background-image: url(<?=$imageFull?>);
+        }
+
+        @media (max-width: 991px) {
+            .header {
+                background-image: url(<?=$imageLarge?>);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .header {
+                background-image: url(<?=$imageMediumLarge?>);
+            }
+        }
+    </style>
