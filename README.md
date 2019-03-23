@@ -552,4 +552,49 @@
     }, rand + rand2);
 	});
     
-    
+# Imac signature issue
+	https://www.daretothink.co.uk/html-email-signature-in-apple-mail/
+
+# pdf share broken link at blog
+	wordpress post editor check <img width: 50 px> extra space causes this problem
+	
+# hubspot form issue:
+	<h3>Internal Lead Submission</h3>
+	[/vc_column_text][vc_column_text]
+	<div class="hubspot_internal hbspt-form"></div>
+	<!-- [if lte IE 8]>
+	<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+	<![endif]--> <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+	<script>
+	  hbspt.forms.create({
+		portalId: "something",
+		formId: "something",
+		target: ".hubspot_internal",
+	});
+	</script>[/vc_column_text][/vc_column][vc_column width="1/4"][/vc_column][/vc_row]
+
+# screen width capture issue
+	use Math.round($(document).width()) instead of Math.round($(window).width()) to capture the width of the screen, 	 this is more accurate
+	
+# backlink:
+	对于搜尋引擎最佳化（SEO）而言，反向链接能够使网站获得好的排名，所以，反向链接的好坏直接影响网站的整体权重和流量。
+	在论坛签名檔内加上网站名，发言时就会带上网站链接
+	创建博客，在更新的文章内加上网址
+	到各个相关门户投稿，并加上网站链接
+	在别人博客留言
+	在社交媒体上发帖子，在上面建立反向链接
+	和其他网站交换友情链接
+
+# cookie script
+	https://cookieconsent.insites.com/
+
+# array to string convertion ISSUE
+	check the function defination and usage,for example:
+	get_the_terms (int|object, string);
+	wp_get_post_terms(int,string|array);
+	use second function can solve the problem
+
+# certain webpage is slow
+	1.turn on the debug at wp.config,(some functions will still work and won't response the error message when debug is off); 
+	2.check function in that page, might have kind of array to string convertion issues that will slow down the page speed.
+	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
