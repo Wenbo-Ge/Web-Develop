@@ -598,3 +598,58 @@
 	1.turn on the debug at wp.config,(some functions will still work and won't response the error message when debug is off); 
 	2.check function in that page, might have kind of array to string convertion issues that will slow down the page speed.
 	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
+	
+# use url to filter the contents
+	hardcoded: 
+	<script>
+    $(document).ready(function () {
+        if ($(location).attr('href').indexOf("?filter=wp-slug") != -1) {
+            $('button[data-filter=".wp-slug"]').trigger('click');
+        } else {
+            if ($(location).attr('href').indexOf("?filter=wp-slug") != -1) {
+                $('button[data-filter=".wp-slug"]').trigger('click');
+            } else {
+                $('button[data-filter="all"]').trigger('click');
+            }
+        }
+    });
+	</script>
+	
+	function 1: customize function
+	<script>
+	 $(function () {
+       var filter = getParameterByName('filter');
+        if (filter)
+           $('button[data-filter=".' + filter + '"]').trigger('click');
+     });
+     </script>
+     
+     getParameterByName('name') this function coded like this:
+     function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+			
+	function 2: use js filter library build in function (library can be found at https://www.kunkalabs.com/tutorials/filtering-with-mixitup/) 
+	<script>
+    $(function () {
+        var filter = getParameterByName('filter');
+        if (filter) {
+            var mixer = mixitup('.mix-container');
+            mixer.filter('.' + filter);
+        }
+    });
+	</script>
+
+# Css Cursor:
+	cursor: grab;
+	cursor: point;
+	cursor: move;
+
+# CSS Background :
+	background-position: can be top right; center; or 80% 90%
+
+# detect noscript(if browser turns off the javascript)
+	https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498
