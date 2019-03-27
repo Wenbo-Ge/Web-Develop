@@ -653,3 +653,131 @@
 
 # detect noscript(if browser turns off the javascript)
 	https://webdesign.tutsplus.com/tutorials/quick-tip-dont-forget-the-noscript-element--cms-25498
+	
+ # Url Shortener
+ 	https://github.com/jmccartie/php-url-shortener
+	1.downlkoad code from github
+	2.do configuration on config.php
+	3.modify connect.php, create.php, index.php, view.php
+	4.if sql doesn't support, change sql into sqli
+	5.upload all files to server(must include .htaccess file)
+	6.type in url: A.Get Method: domin/create.php?url=...&pw=...
+		       B.Post Method: ajax to do cross domain call from another the php file
+	7.js call is the most important one, check utm builder js
+
+# FTP Configuration
+	1. set up ftp account in the server (Make sure the Directory is correct and identical the the phpstorm)
+	2. in phpstorm, tools -> deployment -> configuration -> + add new one -> choose typy to FTP -> FTP host (should be 	      server host) -> Root path(/ or try auto detect) -> user name and password (identical to server FTP account) ->              deployment path on server(/)
+	3. options: ctrl + s, automatic uploads
+	
+# PHP add password to page
+	check view.php at url shortener package
+	
+# js LinkedIn page crawler
+	function JSONToCSVConvertor(JSONData, ReportTitle, ShowLabel) {
+    //If JSONData is not an object then JSON.parse will parse the JSON string in an Object
+    var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
+
+    var CSV = '';
+    //Set Report title in first row or line
+
+
+    //1st loop is to extract each row
+    for (var i = 0; i < arrData.length; i++) {
+        var row = "";
+
+        //2nd loop will extract each column and convert it in string comma-seprated
+        for (var index in arrData[i]) {
+            row += '"' + arrData[i][index] + '",';
+        }
+
+        row.slice(0, row.length - 1);
+
+        //add a line break after each row
+        CSV += row + '\r\n';
+    }
+
+    if (CSV == '') {
+        alert("Invalid data");
+        return;
+    }
+
+    //Generate a file name
+    var fileName = "Giatec_";
+    var today = new Date();
+    var date = '_' + today.getFullYear()+'_'+(today.getMonth()+1)+'_'+today.getDate()+'_';
+
+    //this will remove the blank-spaces from the title and replace it with an underscore
+    fileName += ReportTitle.replace(/ /g, "_");
+
+    //Initialize file format you want csv or xls
+    var uri = 'data:text/csv;charset=utf-8,' + escape(CSV);
+
+    // Now the little tricky part.
+    // you can use either>> window.open(uri);
+    // but this will not work in some browsers
+    // or you will not get the correct file extension
+
+    //this trick will generate a temp <a /> tag
+    var link = document.createElement("a");
+    link.href = uri;
+
+    //set the visibility hidden so it will not effect on your web-layout
+    link.style = "visibility:hidden";
+    link.download = fileName + date +".csv";
+
+    //this part will append the anchor tag and remove it after automatic click
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+	}
+
+	jQuery(function ($) {
+    	var data = [], list = [];
+   	 var rand = Math.round(Math.random() * (3000)) + 3000;
+    	var rand2 = Math.round(Math.random() * (3000)) + 2000;
+   	 list['first_name'] = 'First Name';
+   	 list['last_name'] = 'Last Name';
+    	list['job_title'] = 'Job Title';
+    	list['company'] = 'Company';
+    	list['location'] = 'Location';
+    	list['domain'] = 'Domain';
+   	 list['contact_name'] = 'Contact Name';
+    	list['campaign'] = 'Campaign';
+   	 list['rating'] = 'Rating';
+    	list['country'] = 'Country';
+    	list['state'] = 'State';
+    	data.push(list);
+    	var interval = window.setInterval(function () {
+        rand = Math.round(Math.random() * (8000 - 5000)) + 3000;
+        rand2 = Math.round(Math.random() * (8000 - 5000)) + 2000;
+        $("html").animate({scrollTop: $(document).height() * 2}, rand2, function () {
+            jQuery('.search-results__result-item').each(function (index, element) {
+                list = [];
+                var name = $(element).find("dt.result-lockup__name a.ember-view");
+                list['first_name'] = $(name).text().split(' ')[12].trim();
+                list['last_name'] = $(name).text().split(' ')[13] == undefined ? '' : $(name).text().split(' ')[13].trim();
+                var job_title = $(element).find('dd.result-lockup__highlight-keyword > span:first-child');
+                list['job_title'] = $(job_title).text().trim();
+                var company_name = $(element).find('.horizontal-person-entity-lockup-4.result-lockup__entity.ml4 dd.result-lockup__highlight-keyword .result-lockup__position-company a > span:first-child');
+                list['company'] = $(company_name).text().trim();
+                var location_name = $(element).find('ul.result-lockup__misc-list li.result-lockup__misc-item');
+                list['location'] = $(location_name).text().trim();
+                list['domain'] = '';
+                list['contact_name'] = '';
+                list['campaign'] = '';
+                list['rating'] = '';
+                list['country'] = '';
+                list['state'] = '';
+                data.push(list);
+            });
+            if (!jQuery('button.search-results__pagination-next-button').is(':disabled')) {
+                jQuery('button.search-results__pagination-next-button').trigger('click');
+            } else {
+                clearInterval(interval);
+                JSONToCSVConvertor(data, $('.search-nav--title a').text(), false);
+            }
+        });
+    }, rand + rand2);
+	});
+
