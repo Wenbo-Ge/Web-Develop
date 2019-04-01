@@ -829,3 +829,55 @@
 	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
 	
 	
+	
+	
+	
+	
+# Clone bitbucket repository to php storm and configure the deployment:
+
+	1. In Bitbucket: clone the repository(clone the link).
+	2. In phpstorm: menu->vcs->checkout from verson control->git->paste BB url(Dirctory: /phpstomProjects)
+	3. Menu: Tools->Deployment->configuration,
+		 type SFTP,
+		 SFTP host: server ip, port:22
+		 Root Path: /home/giatec/web/wenbo.giatecscientific.com/public_html/landingpage  (this is put under wordpress package)
+		 user name: namefor server
+		 password: name for password
+		 mappings: deployment path:/
+	4. Tools->Deployment->options->ctrl+s/upload external changes
+	5. upload local file to server
+
+# Server Knowledge:
+	1. Setup Server:
+		a.setup aws account
+		b.follow this link (https://www.nginx.com/blog/setting-up-nginx/#open-web-page) to setup ubuntu instance in 			the server;
+		c.install vestacp to the ubuntu instance in server: follow this link (https://www.clickittech.com/control-			panels/install-vestacp-aws/)(https://vestacp.com/install/)
+		d.configure vestacp: edit USER, set password
+		e.use filezilla to upload file to server (ip:xx.xx.xxx.xx; username:admin; password:xxx)
+		
+# AWS how to increase volumn:
+	https://stackoverflow.com/questions/6151695/ec2-instance-on-amazon-and-i-am-greeted-with-no-space-left-on-the-disk
+	
+# migrate all items from server to server:
+
+	1. ssh to the server that wants to store all items:
+		ssh to aws server
+		a. aws instance connection
+		b. after installl vestacp, terminal ssh admin@xx.xxx.xxx.xx
+	2. use scp to migrate all files from original server to new server:
+		sudo scp admin@xx.xx.xxx.xx:/backup/admin.2019-03-04_05-18-05.tar /backup
+
+
+	3. restore all items in new server: 
+		sudo /usr/local/vesta/bin/v-restore-user admin admin.2019-03-05_05-21-51.tar
+
+	4. configure domain: a. add new web in vesta
+			     b. move all files under public_html to new web's public_html
+				sudo mv /home/admin/web/wenboge.ca/public_html/* /home/admin/web/xxxxx/public_html
+			     c. update DB password
+	5. point domain to new IP:
+		a. In vestacp: the domain should be identical to godaddy domain
+			for example: domain in vestacp: wenboge.ca;
+				     domain in godaddy: wenboge.ca;
+		b. Pointing domain name to ip in godaddy:
+		https://gethelp.wildapricot.com/en/articles/549-changing-your-dns-settings-to-point-to-a-different-ip-address
