@@ -828,8 +828,14 @@
 	2.check function in that page, might have kind of array to string convertion issues that will slow down the page speed.
 	3.when debug is on, error message will appear even though the function is working but slowdown the speed.
 	
+# de-index page in robot.txt
+	User-agent: *
+	Disallow: /fetch-tweets.php
+	then, sss.com/fetch-tweets.php will be de-index.
 	
-	
+# change url without refresh the page
+	js: history.pushState(null, '' , '?filter=asda');
+	then ?filter=asda will be right after the url	
 	
 	
 	
