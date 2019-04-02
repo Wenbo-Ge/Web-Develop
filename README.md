@@ -837,6 +837,90 @@
 	js: history.pushState(null, '' , '?filter=asda');
 	then ?filter=asda will be right after the url	
 	
+# js hardcode to "smart code"  (and how to select data-attribute in jquery)
+	hardcode:
+	$('[data-filter="all"]').click(function () {
+        $('.product_name').replaceWith('<span class="txt product_name">Products</span>');
+        $('.project_type_name').replaceWith('<span class="txt project_type_name">Project Types</span>');
+       history.pushState(null, '', '?filter=.all');
+  	 });
+
+    $('[data-filter=".smart-concrete"]').click(function () {
+       $('.product_name').replaceWith('<span class="txt product_name">Product: aaa bbb</span>');
+       $('.project_type_name').replaceWith('<span class="txt project_type_name">Project Types</span>');
+        history.pushState(null, '', '?filter=aaa-bbb');
+   	});
+
+	
+	smart code: 
+	$('.show_buttons button').click(function () {
+            var filter = $(this).data('filter');
+            var text = $(this).html();
+            $('.dropdown-filter .txt').each(function () {
+                $(this).html($(this).data('title'));
+            });
+            if(filter !== 'all') {
+                var prefix = $(this).parent().parent().find('.txt').data('prefix');
+                $(this).parent().parent().find('.txt').html(prefix+text);
+                history.pushState(null, '', '?filter=' + filter);
+            }else {
+                history.pushState(null,'', '');
+
+            }
+        });
+	
+	
+	
+# jQuery to check input check box
+	var value='';
+	jQuery("input:checkbox[value='" + value + "']").prop("checked", true);
+	
+# jQuery auto run script when page loaded
+	function call () {
+		alert('aaa');
+		};
+	jQuery(document).ready(function () {
+		call()
+	});
+	
+# jQuery click to scroll down 
+	jQuery(document).ready(function( $ ) {
+    $('.searchbychar').click(function () {
+        var thisHeight = $('aaa').height();
+        var height = srnavHeight + $('sss').height();
+
+        var divID = '#' + this.getAttribute('data-target');
+		if(thisHeight>50)
+			height = height+70;
+            $('html, body').animate({
+                scrollTop: $(divID).offset().top - height
+            }, 1000);
+    });
+	});
+ 	
+# CSS Target IE and EDGE
+	https://gist.github.com/zunairmushtaq/aeaa48432d51cad0eb1c
+	ie : @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.selector { property:value; }
+	}
+	edge: @supports (-ms-ime-align:auto) { 
+		.selector { property:value; }
+	}
+	
+# PHP Arg to query custom field group (True/False type)
+	https://www.billerickson.net/code/wp_query-arguments/
+	https://www.advancedcustomfields.com/resources/true-false/
+	'meta_value' => '1' (true);
+	'meta_value' => '0' (false);
+	
+# lazyload image
+	http://jquery.eisbehr.de/lazy/
+	
+# html url is long that is out of screen when screen size is small
+	use css word-break: break-word,
+	then url will break into second line
+	
+	
 	
 	
 # Clone bitbucket repository to php storm and configure the deployment:
