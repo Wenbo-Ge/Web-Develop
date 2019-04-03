@@ -920,7 +920,103 @@
 	use css word-break: break-word,
 	then url will break into second line
 	
+# bootstrap grid issue
+	if class name contains col-md-6 these kind of attributes,
+	need to add 'row' in parent div,
+	or before current class name;
+	EX: <div class="row">
+		<div class="col-md-6"></div>
+	    </div>
+	if missing "row", will have some issues to target in css.
 	
+	to make a whole div into different rows:
+	<div class="row">
+		<div class="container">
+			<div class="row row_1">
+				<div class="col-lg-6 col-md-6"></div>
+			</div>
+			<div class="row row_2">
+				<div class="col-lg-6 col-md-6"></div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="container">
+			<div class="row row_1">
+				<div class="col-lg-6 col-md-6"></div>
+			</div>
+			<div class="row row_2">
+				<div class="col-lg-6 col-md-6"></div>
+			</div>
+		</div>
+	</div>
+	
+	
+# Use custom field to controll form
+	build custom field to caputure form id,
+	use differnet id to call form to avoid hardcode.
+	
+# put php in js
+	<script>
+	var form_id = '<?= !empty($stickyButtons[$key]['form_id']) ? $stickyButtons[$key]['form_id'] : "other else"?>';
+	target: form_id,
+	</script>
+# backgroud has two differnt color 
+	https://www.w3schools.com/colors/colors_gradient.asp
+	
+# if dev appears at google search page
+	1. robots.txt: 
+		User-agent: *
+		Disallow: / or *
+	2. check url of appeared dev,
+		delete that index.html from server side
+		
+# Css dialogue box
+	.dialogue-box {
+      position: relative;
+      max-width: 600px;
+      height: auto;
+      border: 2px solid #ffffff;
+      //margin: 100px auto;
+      padding: 15px;
+      box-sizing: border-box;
+	}
+
+
+	.dialogue-box:after {
+    content: "";
+     position: absolute;
+      width: 30px;
+      height: 30px;
+      border-top: 0px solid #ffffff;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      border-left: 0px solid #ffffff;
+      top:106%;
+      left: 70%;
+      margin-left: -25px;
+      content: '';
+      transform: rotate(45deg);
+      margin-top: -25px;
+      background: #0b9444;
+	}
+
+# CSS change for svg
+	Can dirctly add in-line style to svg tag:
+	<svg style="color: green"></svg>
+	
+# CSS hover en-large effect 
+	use transform: scale(1.1);
+	add large width and height will have some bad effect.
+	
+# CSS fancy hover effect library
+	http://ianlunn.github.io/Hover/
+	
+# CSS responsive @media min
+	@media (min-width:1200px) {}, then @media (min-width: 991px) {}
+
+# fancy box library
+	https://fancyapps.com/fancybox/3/	
 	
 	
 # Clone bitbucket repository to php storm and configure the deployment:
