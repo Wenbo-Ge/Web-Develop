@@ -1019,6 +1019,43 @@
 	https://fancyapps.com/fancybox/3/	
 	
 	
+# vertical align middle method:
+	1. padding: 20px 0;
+	2.<div style="display: table">
+		<div style="display: table-cell; vertical-algin:middle;">
+		</div>
+	  </div>
+	3. display: block; line-height:1.5; vertical-align: middle;
+	4. at outter div: display: flex; align-items: center;
+	
+	
+# slider inside slider, to make one slider section swipe-able
+	https://jsfiddle.net/WALKMAN5/0smp3kst/14/
+	
+# Remove links from sitemap in wordpress
+	wp-admin: -> SEO search sppearance ->taxonomies -> Find the category -> set to no, hide
+	
+# change toolbar color for mobile browser
+	<meta name="theme-color" content="#007A3E"> in header
+ 
+# php file call
+	require 'jazzAPI/jazz.php' use this path if they are in same dirctory
+	require './jazzAPI/jazz.php' need to find another dirctory
+
+# wordpress function calls:
+	when calling the query_posts(), should end up with wp_reset_query()
+	
+# Anchor Scorll Down:
+	https://codepen.io/jooleearr/pen/gpooKj
+	
+# External link target="_blank"
+	if open a new tab for an external link, should add rel="noopener" to the a tag like <a href="..." target="_blank" rel="noopener"></a>
+	
+# CSS Background Blur
+	  filter: blur(8px);
+  	  -webkit-filter: blur(8px);	
+	
+	
 # Clone bitbucket repository to php storm and configure the deployment:
 
 	1. In Bitbucket: clone the repository(clone the link).
@@ -1067,3 +1104,14 @@
 				     domain in godaddy: wenboge.ca;
 		b. Pointing domain name to ip in godaddy:
 		https://gethelp.wildapricot.com/en/articles/549-changing-your-dns-settings-to-point-to-a-different-ip-address
+
+# Ubuntu low space on disk
+	1. sudo du -hx --max-depth=1/
+	2. sudo ls -la /root/.local/share/Trash/files
+	3. sudo rm -rf /root/.local/share/Trash
+	
+	   To clear the backup files in Ubuntu
+	1. Terminal: cd /
+	2. cd backup
+	3. ls
+	4. sudo rm -r *
