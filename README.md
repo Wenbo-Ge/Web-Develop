@@ -1054,7 +1054,35 @@
 # CSS Background Blur
 	  filter: blur(8px);
   	  -webkit-filter: blur(8px);	
+
+# Css z-index
+	must use with position which is not static, otherwise, z-index won't work
 	
+# HTML table
+	<th colspan=""> colspan can take whole row in the table.
+
+# hubspot form customizations:
+	Use JS to controll forms: check this page- https://developers.hubspot.com/docs/methods/forms/advanced_form_options
+	
+# Css Center a whole div when it doesn't have full width:
+	display: block;
+	float: none;
+	Margin: 0 auto;
+
+# PHP GET method:
+	in JS Post: 
+	jQuery.post("/wp-admin/admin-ajax.php?action=roi&step=1",
+                        {
+                            pv: jQuery('#pv').val(),
+                            unit: jQuery('#unit').val(),
+                            pn: jQuery('#pn').val(),
+                            first: jQuery('#first').val(),
+                            last: jQuery('#last').val(),
+                            email: jQuery('#email').val()
+                        },
+			....);
+	JQuery uses http GET.
+	In PHP, $_GET["step"]....
 	
 # Clone bitbucket repository to php storm and configure the deployment:
 
