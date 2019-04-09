@@ -1084,6 +1084,79 @@
 	JQuery uses http GET.
 	In PHP, $_GET["step"]....
 	
+	
+# Bootstrap Grid
+	Order of the responsiveness(from large to small):
+	col-lg-12(width: >1200px) col-md-12(width: less than 1200px) col-sm-12(width: less than 991px) 
+	
+# Bugs fix after server is upgraded to php 7.2
+	1. create_function
+	   	a.custome_function.php
+	   	b.server=>wp-filebase->wp-filebase.php
+	2. each
+		a.server=>JS-composer-> class-vc-mapper.php
+	3. private login
+	
+	fixes: 1. add_filter("gform_confirmation_anchor", function() {return false;});
+
+		2. {
+        		return function($cl,$fnc) {$p=func_get_args(); return wpfb_call("' . $cl . '","' . $fnc . 				'",$p,true);};
+    		}
+
+	3. foreach( $this->init_activity as $object => $params)  {
+			list( $object, $method, $params ) = $params[1];
+
+
+	4. if(function_exists('pg_user_logged')) { }
+
+# push Dev to live
+     PHP:
+	1. Checkout origin/master as new local_master
+	2. Checkout local_master
+	3. Git pull
+	4. Merge other local branch to this local_master branch
+	5. ctrl+shift+k to push local_master
+     
+     Terminal:
+     	1. ssh admin@xx.xx.xxx.xxx (password: need password for server)
+	2. cd /home/admin/web/giatecscientific.com/public-html/wp_content/themes/twentyeleven
+	3. git branch to check if this head is at master branch
+	4. git pull (password for pull);
+	
+# validation before form submission
+	function validationCheck() {
+                            var phone_number = jQuery('inputID').val();
+                            jQuery.get(
+                                'http://apilayer.net/api/validate?access_key=....&number=' + phone_number, function (data) {
+                                    console.log(data.valid);
+                                    if (data.valid === false) {
+                                        alert('Your Phone Number is not valid!');
+                                    } else {
+                                        jQuery('formID')[0].submit();
+                                    }
+                                });
+                        }
+                        jQuery('body').on('click', 'formID input[type="submit"]', function (e) {
+                                        e.preventDefault();
+                                        validationCheck();
+                        });
+
+# CSS selector (1,3,5; 2,4,6)
+
+	.class_name:nth-child(2n-1) {}
+	.class_name:nth-child(2n) {}
+	nth-child(): regardless type;
+	nth-of-type(): regard type
+	
+# jQuery Error Issue (... is not function):
+	
+	for example: jQuery('..')[1].val() has error -> val is not function,
+	solution: try to use jQuery('')[1].value will solve the issue.
+	
+	
+# jQuery UI Drag and Drop
+	
+	https://codepen.io/benkalsky/pen/ByJawa
 # Clone bitbucket repository to php storm and configure the deployment:
 
 	1. In Bitbucket: clone the repository(clone the link).
