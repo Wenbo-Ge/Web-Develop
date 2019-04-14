@@ -1226,7 +1226,61 @@
 
 	https://stackoverflow.com/questions/33811041/javascript-zoom-in-on-mouseover-without-jquery-or-plugins
 	
+# Background Size
+	background-size: 100% 80% to customize the coverage of background
 	
+# Differnet image size to set equal height without changing image size ratio:
+	max-width: 100%;
+	height: specifc height(64px).
+	
+# Css stylesheet idea
+	1. Put pre-setup at the beginning.
+	2. for example: 
+	* {
+  	font-family: interstate, Arial, sans-serif;
+	  	font-weight: 500;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+
+	}
+
+	h1, h2, h3, h4, h5 {
+	font-family: sofia-pro, sans-serif;
+
+	line-height: 1;
+	color: #161616;
+	}
+
+	h1 {
+	margin-top: 0;
+	font-size: 4.769em;
+	}
+	h2 {
+	font-size: 3.052em;
+	}
+	h3 {
+	font-size: 2.441em; line-height: 1.05;
+	}
+	h4, p.large-par {font-size: 1.953em;font-family: sofia-pro, sans-serif;}
+	p {
+	font-size: 1.25em;
+	}
+
+	a {
+	font-family: sofia-pro, sans-serif;
+	font-size: 1em;
+	}
+	
+	
+
+
 # Clone bitbucket repository to php storm and configure the deployment:
 
 	1. In Bitbucket: clone the repository(clone the link).
