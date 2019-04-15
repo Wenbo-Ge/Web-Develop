@@ -1279,7 +1279,31 @@
 	}
 	
 	
+# JS call date(month and day) :
 
+ 	var months    = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+	var now       = new Date();
+	var thisMonth = months[now.getMonth()]; // getMonth method returns the month of the date (0-January :: 11-December)
+	var thisDay = now.getDate();
+	var output1 = document.getElementById('mt');
+	var output2 = document.getElementById('d');
+
+    	output1.innerText = thisMonth;
+    	output2.innerText = thisDay;
+
+# Slider in effect
+
+	https://codepen.io/blondersholmvik/pen/BLKxZE
+	
+	
+# FileZilla to connect to server:
+	Use SFTP:
+	1. host: should be ip address;
+	2. Username: should be username of the server;
+	3. Password: should be password of the server;
+	4. Port: 22
+	and then connect to server;
+	5. Choose local site which want to store the downloaded files and choose the remote site in the server.
 
 # Clone bitbucket repository to php storm and configure the deployment:
 
