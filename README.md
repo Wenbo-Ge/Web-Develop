@@ -1295,6 +1295,43 @@
 
 	https://codepen.io/blondersholmvik/pen/BLKxZE
 	
+# Use URL to jump to certain section
+	https://css-tricks.com/hash-tag-links-padding/
+
+	html: <span id="test">&nbsp;</span>
+	css: #test {
+		      margin-top: -300px;        /* Size of fixed header */
+		      padding-bottom: 300px;
+		      display: block;
+		}
+
+	url: ../../#test will jump to test section
+
+	 or use JS:
+	html: <li class="col-lg-4"><a href="#skills_section" class="anchor_link"><div><span>My Skills</span></div></a></li>
+				<li class="col-lg-4"><a href="#experience_section" class="anchor_link"><div><span>My Experience</span></div></a></li>
+				<li class="col-lg-4"><a href="#demos_section" class="anchor_link"><div><span>Demos & Projects</span></div></a></li>
+
+	$( ".anchor_link" ).click(function( event ) {
+		    event.preventDefault();
+		    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
+		});
+	
+
+# Equalise the height
+
+	var highestBox = 0;
+        jQuery('.outter').find('.inner').each(function () {
+
+					jQuery(this).removeAttr('style');
+					// If this box is higher than the cached highest then store it
+					if (jQuery(this).height() > highestBox) {
+						highestBox = jQuery(this).height();
+					}
+
+				}).height(highestBox);
+				
+				
 	
 # FileZilla to connect to server:
 	Use SFTP:
