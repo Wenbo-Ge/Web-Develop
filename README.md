@@ -1330,7 +1330,116 @@
 					}
 
 				}).height(highestBox);
-				
+	
+# Slick Slider Customization
+
+	1. If slick arrow color cant be changed, try to change opacity, set opacity to 1.
+	2. slick slider last slider half fade effect: 
+		![screenshot from 2019-01-29 14-56-01](https://user-images.githubusercontent.com/36894305/51936485-4b036d00-23d6-11e9-91f9-07e0887a83ea.png)
+		code: 
+		.sensor_slider {
+			.slick-list {
+				padding:0 15% 0 0;
+        			margin-right: -10%;
+			}
+		}
+		.sensor_slider:after {
+      			content: "";
+  			position: absolute;
+ 			z-index: 1;
+ 			width: 300px;
+  			top: 0;
+  			height: 100%;
+  			pointer-events: none;
+	    		}
+    		.sensor_slider:after {
+  			right: -120px;
+			background: linear-gradient(to left, #F2F2F2, transparent);
+			}
+		
+	
+	3. slick slider two sides fade:
+	![screenshot from 2019-02-25 09-35-28](https://user-images.githubusercontent.com/36894305/53344496-cfb3af00-38e0-11e9-8316-aadcfad7920a.png)
+		html:
+
+	<div class="col-lg-12 col-md-12 col-sm-12 display_img">
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../.." alt="">
+	<!--                  <div class="overlay">-->
+	<!--    <div class="text">Sarah D on Jobsite, Ottawa</div>-->
+	<!--  </div>-->
+           	 </div>
+            	<div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../.." alt="">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../.." alt="">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../.." alt="">
+            </div>
+            <div class="slider">
+                <img src="<?php echo get_template_directory_uri(); ?>/.../../.." alt="">
+            </div>
+        </div>
+
+
+	css:
+
+      .display_img:after {
+      content: "";
+  	position: absolute;
+ 	 z-index: 1;
+ 	 width: 100%;
+  	top: 0;
+  	height: 100%;
+ 	 pointer-events: none;
+    }
+    .display_img:after {
+  	background: linear-gradient(to left, white, transparent 10%, transparent 90%, white 100%);
+	}
+
+	js:
+
+	$('.display_img').slick({
+  		dots: false,
+        infinite: true,
+        speed: 300,
+        centerMode: true,
+        centerPadding: '60px',
+        autoplay: false,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        arrows: true,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '100px',
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '30px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+	});
+	
+	4. If slick slider box-shadow is missing:
+		solution: .slick-list {
+			padding: 25px 0;
+		}
+		give a padding to slick list that will make shadow visible again
+		
+
 				
 	
 # FileZilla to connect to server:
