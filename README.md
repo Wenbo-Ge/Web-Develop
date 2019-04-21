@@ -1438,7 +1438,86 @@
 			padding: 25px 0;
 		}
 		give a padding to slick list that will make shadow visible again
-		
+
+# Slide in effect from outside of screen:
+	html:
+	side div that wanted to be slided in:
+
+			<div class="footer_quote_form">
+				<div class="scroller">
+					<div class="form_title">
+						TEST
+						<i class="material-icons close_form right">&times;</i>
+					</div>
+					<div class="hubspot_quote_request hbspt-form">
+					</div>
+				</div>
+			</div>
+
+	css:
+
+	body .footer_quote_form {
+    	display: none;
+   	width: 100%;
+   	max-width: 331px;
+    	position: fixed;
+    	top: 0;
+    	right: -767px;
+    	z-index: 9999999999;
+    	background: #fff;
+    	height: 100%;
+    	font-family: open sans;
+    	-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.6);
+    	-moz-box-shadow: 0 0 4px 0 rgba(0,0,0,.6);
+    	box-shadow: 0 0 4px 0 rgba(0,0,0,.6);
+    	overflow: scroll;
+    	-webkit-overflow-scrolling: touch;
+	}
+
+	body .footer_quote_form div.scroller {
+    	position: absolute;
+    	left: 0;
+    	right: 0;
+	}
+
+	body .footer_quote_form .form_title {
+   	background: #f48513;
+    	color: white;
+    	text-align: center;
+    	font-size: 20px;
+    	padding: 16px 0;
+    	font-weight: 600;
+	}
+
+
+	JS:
+
+	<script>
+  	function startQuote() {
+				jQuery('.footer_quote_form .scroller').css('bottom', 'auto');
+				jQuery('body').addClass('show-form');
+				jQuery('.footer_quote_form').stop().show().animate({"right": "0px"}, "slow", function () {
+					jQuery(window).scrollTop(0);
+				});
+
+			}
+  
+  	function removeQuote() {
+				jQuery('body').removeClass('show-form');
+				jQuery('.footer_quote_form').stop().animate({"right": "-767px"}, "slow", function () {
+					jQuery('.footer_quote_form').hide();
+				});
+			}
+  
+  
+  	jQuery('.close_form').click(function () {
+					removeQuote();
+				});
+				jQuery('button').click(function () {
+						startQuote();
+				});
+	</script>
+	
 
 				
 	
