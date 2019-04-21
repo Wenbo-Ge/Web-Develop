@@ -1518,6 +1518,7 @@
 				});
 	</script>
 	
+# phone slider effeect
 
 				
 	
