@@ -2,6 +2,7 @@
 	install sass to edit .scss files 
 	when new .scss is created, need to add two css files which under .scss to git
 
+
 # CSS Selector
 	div > p : select all p where parent is a div
 
