@@ -1676,6 +1676,99 @@
 		outlierNextSlide.removeClass(allPositionClasses).addClass("outlier-slide")
 		}
 
+# Sync JazzHR posts to wordpress custom field:
+	JazzHR api library:
+	https://github.com/jordanandree/jazz-api
+	
+	
+	function fetchCareer ()
+	{//Get job posts from jazzHR API
+    require "jazzAPI/jazz.php";
+    $jazz = new Jazz("apiKEY");
+    $jazz->cache['ENABLED'] = false;
+    $subdomain = "domain"; // subdomain for you company jazz domain
+    $jobs = $jazz->getJobs(array(
+        "status" => "open", // open jobs
+    ));
+    foreach ($jobs as $job) {
+        if (!empty($job->id)) {
+            $argsCareer = [
+                        'meta_key' => 'position_id',
+                        'meta_value' => $job->board_code,
+                        'post_type' => 'career',
+                        ];
+            $the_query = new WP_Query($argsCareer);
+            if (!empty($the_query->posts)) {
+                foreach ($the_query->posts as $post) {
+                    $value_career = get_field('position_id', $post->ID);
+                    if ($value_career == $job->board_code) {
+                        $args = [
+                            'ID' => $the_query->post->ID,
+                            'post_title' => $job->title,
+                            'post_content' => $job->description,
+                            'post_status' => 'publish',
+                            'post_author' => 1,
+                            'post_type' => 'career',
+                            'post_date' => $job->original_open_date
+                        ];
+                        $post_id_update = wp_update_post($args);
+                        if (!is_wp_error($post_id_update)) {
+                            update_field('position_type', $job->department, $post_id_update);
+                            update_field('position_title', $job->title, $post_id_update);
+                            update_field('position_location', $job->city . ', ' . $job->state, $post_id_update);
+                            update_field('position_link', 'http://' . $subdomain . $job->board_code, $post_id_update);
+                            update_field('position_id', $job->board_code, $post_id_update);
+                        } else {
+                            echo $post_id_update->get_error_message();
+                        }
+                    } else {
+                        $args = [
+                            'post_title' => $job->title,
+                            'post_content' => $job->description,
+                            'post_status' => 'publish',
+                            'post_author' => 1,
+                            'post_type' => 'career',
+                            'post_date' => $job->original_open_date
+                        ];
+                        $post_id_insert = wp_insert_post($args);
+                        if (!is_wp_error($post_id_insert)) {
+                            update_field('position_type', $job->department, $post_id_insert);
+                            update_field('position_title', $job->title, $post_id_insert);
+                            update_field('position_location', $job->city . ', ' . $job->state, $post_id_insert);
+                            update_field('position_link', 'http://' . $subdomain . $job->board_code, $post_id_insert);
+                            update_field('position_id', $job->board_code, $post_id_insert);
+                        } else {
+                            echo $post_id_insert->get_error_message();
+                        }
+                    }
+                }
+            } else {
+                $args = [
+                    'post_title' => $job->title,
+                    'post_content' => $job->description,
+                    'post_status' => 'publish',
+                    'post_author' => 1,
+                    'post_type' => 'career',
+                    'post_date' => $job->original_open_date
+                ];
+                $post_id_insert = wp_insert_post($args);
+                print_r($post_id_insert);
+                if (!is_wp_error($post_id_insert)) {
+                    update_field('position_type', $job->department, $post_id_insert);
+                            update_field('position_title', $job->title, $post_id_insert);
+                            update_field('position_location', $job->city . ', ' . $job->state, $post_id_insert);
+                            update_field('position_link', 'http://' . $subdomain . $job->board_code, $post_id_insert);
+                            update_field('position_id', $job->board_code, $post_id_insert);
+                } else {
+                    echo $post_id_insert->get_error_message();
+                }
+            }
+            wp_reset_postdata();
+        }
+    }
+	}
+	
+
 
 				
 	
