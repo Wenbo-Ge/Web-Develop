@@ -1768,7 +1768,42 @@
     }
 	}
 	
+# Retrieve post from Wordpress filter by custom field:
+	<?php
+            $project_args = array(
+                'post_type' => 'aaa-bbb',
+                'order' => 'DESC',
+                'orderby' => 'date',
+                'meta_key' => 'featured',
+                'meta_value' => '1',
+                'posts_per_page' => 2
+            );
+            $projects = new WP_Query($project_args);
 
+            if ($projects->have_posts()) : ?>
+                <?php while ($projects->have_posts()) : $projects->the_post();
+                    $post_id = get_the_ID();
+                    $company_location = get_field('location', $post_id);
+                    $summary = get_field('summary', $post_id);
+                    ?>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 product">
+                        <a href="<?php the_permalink(); ?>"><img width="711" height="378"
+                             src="<?php $url = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'aaa-ccc');
+                             echo $url[0]; ?>" alt="<?php the_title(); ?>"></a>
+                        <div class="project_description">
+                            <p class="project_title"><?php the_title(); ?></p>
+                            <div class="project_sum"><span><?= $summary ?></span></div>
+                            <div class="project_link">
+                                <a href="<?php the_permalink(); ?>" class="news_item">
+                                    <span>Read more</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif;
+            wp_reset_query(); ?>
 
 				
 	
