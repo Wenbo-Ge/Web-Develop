@@ -1805,7 +1805,8 @@
             <?php endif;
             wp_reset_query(); ?>
 
-				
+# CSS Route
+	css: use background-image: url("./....") => same level instead of background-image: url("/...")
 	
 # FileZilla to connect to server:
 	Use SFTP:
