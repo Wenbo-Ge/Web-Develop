@@ -1808,6 +1808,10 @@
 # CSS Route
 	css: use background-image: url("./....") => same level instead of background-image: url("/...")
 	
+# Compile scss to css:
+		1.Add watcher
+		2.install sass (https://www.jetbrains.com/help/phpstorm/transpiling-sass-less-and-scss-to-css.html)
+	
 # FileZilla to connect to server:
 	Use SFTP:
 	1. host: should be ip address;
