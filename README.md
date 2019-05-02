@@ -1811,6 +1811,10 @@
 # Compile scss to css:
 		1.Add watcher
 		2.install sass (https://www.jetbrains.com/help/phpstorm/transpiling-sass-less-and-scss-to-css.html)
+
+# php: get different hearder for templates in wordpress
+	https://www.webascender.com/blog/create-multiple-headers-footers-wordpress/
+
 	
 # FileZilla to connect to server:
 	Use SFTP:
