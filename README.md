@@ -1814,6 +1814,11 @@
 
 # php: get different hearder for templates in wordpress
 	https://www.webascender.com/blog/create-multiple-headers-footers-wordpress/
+	
+# JS: Uncaught TypeError: Cannot read property 'add' of null
+	js was triggered twice for same class name:
+	solution: remove extra call for same class name in JS
+https://github.com/kenwheeler/slick/issues/1953
 
 	
 # FileZilla to connect to server:
