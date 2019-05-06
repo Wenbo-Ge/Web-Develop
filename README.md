@@ -1815,6 +1815,29 @@
 # php: get different hearder for templates in wordpress
 	https://www.webascender.com/blog/create-multiple-headers-footers-wordpress/
 	
+	PHP header: use 
+	global $post;
+    	$page=$post->post_name;
+	<?php
+    if ($page == 'demo_0') {
+        ?>
+        <link rel="stylesheet" href="<?= $dir_css ?>/demo_0.css"/>
+        <?php
+    }
+    if ($page == 'demo_1') {
+        ?>
+        <link rel="stylesheet" href="<?= $dir_css ?>/demo_1.css"/>
+        <?php
+    }
+    if ($page == 'demo_2') {
+        ?>
+        <link rel="stylesheet" href="<?= $dir_css ?>/demo_2.css"/>
+        <?php
+    }
+    ?>
+	to retrieve different css stylesheet for different page
+
+	
 # JS: Uncaught TypeError: Cannot read property 'add' of null
 	js was triggered twice for same class name:
 	solution: remove extra call for same class name in JS
