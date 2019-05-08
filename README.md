@@ -1814,7 +1814,8 @@
 
 # php: get different hearder for templates in wordpress
 	https://www.webascender.com/blog/create-multiple-headers-footers-wordpress/
-	
+
+# php header use different page slug to apply different css
 	PHP header: use 
 	global $post;
     	$page=$post->post_name;
