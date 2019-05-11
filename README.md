@@ -1842,7 +1842,15 @@
 # JS: Uncaught TypeError: Cannot read property 'add' of null
 	js was triggered twice for same class name:
 	solution: remove extra call for same class name in JS
-https://github.com/kenwheeler/slick/issues/1953
+	https://github.com/kenwheeler/slick/issues/1953
+	
+# Typing annimation js:
+https://codepen.io/davinci/pen/MKmmrB
+
+
+edit file in server if it's protected:
+
+sudo nano file name
 
 	
 # FileZilla to connect to server:
