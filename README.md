@@ -1845,12 +1845,12 @@
 	https://github.com/kenwheeler/slick/issues/1953
 	
 # Typing annimation js:
-https://codepen.io/davinci/pen/MKmmrB
+	https://codepen.io/davinci/pen/MKmmrB
 
 
-edit file in server if it's protected:
+# edit file in server if it's protected:
 
-sudo nano file name
+	sudo nano file name
 
 	
 # FileZilla to connect to server:
