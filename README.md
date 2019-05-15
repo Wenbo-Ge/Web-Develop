@@ -1851,6 +1851,14 @@
 # edit file in server if it's protected:
 
 	sudo nano file name
+	
+# how to locate php.ini
+
+	put phpinfo(); in index file in wordpress root index.php, then run website, will show the path of php.ini
+
+# how to increase upload limits
+	https://www.hostinger.com/tutorials/fix-the-uploaded-file-exceeds-the-upload-max-filesize-directive-in-php-ini-wordpress
+
 
 	
 # FileZilla to connect to server:
