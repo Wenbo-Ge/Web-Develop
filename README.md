@@ -1857,7 +1857,22 @@
 	put phpinfo(); in index file in wordpress root index.php, then run website, will show the path of php.ini
 
 # how to increase upload limits
-	https://www.hostinger.com/tutorials/fix-the-uploaded-file-exceeds-the-upload-max-filesize-directive-in-php-ini-wordpress
+	https://www.hostinger.com/tutorials/fix-the-uploaded-file-exceeds-the-upload-max-filesize-directive-in-php-ini-	wordpress
+	
+good plugin for wordpress template:
+
+revolution slider
+
+
+form recommendation:
+contact form 7
+
+adobe xd
+
+
+powerful theme:
+
+flatsome
 
 
 	
