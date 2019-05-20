@@ -1859,9 +1859,9 @@
 # how to increase upload limits
 	https://www.hostinger.com/tutorials/fix-the-uploaded-file-exceeds-the-upload-max-filesize-directive-in-php-ini-	wordpress
 	
-good plugin for wordpress template:
+# good plugin for wordpress template:
 
-revolution slider
+	revolution slider
 
 
 form recommendation:
