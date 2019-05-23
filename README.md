@@ -1867,9 +1867,6 @@
 # form recommendation:
 	contact form 7
 
-adobe xd
-
-
 powerful theme:
 
 flatsome
