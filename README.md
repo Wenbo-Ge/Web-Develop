@@ -1867,7 +1867,7 @@
 # form recommendation:
 	contact form 7
 
-powerful theme:
+# powerful theme:
 
 flatsome
 
