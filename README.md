@@ -1869,7 +1869,7 @@
 
 # powerful theme:
 
-flatsome
+	flatsome
 
 
 	
