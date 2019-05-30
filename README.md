@@ -1874,6 +1874,8 @@
 # resume template
 	https://app.zety.com/app/cv/eca62b78-381a-4775-8f17-b78b989cc777#personal
 	
+	
+	
 # FileZilla to connect to server:
 	Use SFTP:
 	1. host: should be ip address;
