@@ -1874,7 +1874,7 @@
 # resume template
 	https://app.zety.com/app/cv/eca62b78-381a-4775-8f17-b78b989cc777#personal
 	
-# An
+# Angular
 https://angular.io/
 https://www.bilibili.com/video/av16953560/?p=3
 	
