@@ -1875,8 +1875,8 @@
 	https://app.zety.com/app/cv/eca62b78-381a-4775-8f17-b78b989cc777#personal
 	
 # Angular
-https://angular.io/
-https://www.bilibili.com/video/av16953560/?p=3
+	https://angular.io/
+	https://www.bilibili.com/video/av16953560/?p=3
 	
 # FileZilla to connect to server:
 	Use SFTP:
