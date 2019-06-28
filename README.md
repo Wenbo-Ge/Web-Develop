@@ -1875,7 +1875,7 @@
 	https://app.zety.com/app/cv/eca62b78-381a-4775-8f17-b78b989cc777#personal
 	
 # Angular
-a
+
 	https://angular.io/
 	https://www.bilibili.com/video/av16953560/?p=3
 	https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e
