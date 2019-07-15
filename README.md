@@ -1901,8 +1901,8 @@
 	3. Menu: Tools->Deployment->configuration,
 		 type SFTP,
 		 SFTP host: server ip, port:22
-		 Root Path: /home/giatec/web/wenbo.giatecscientific.com/public_html/landingpage  (this is put under wordpress package)
-		 user name: namefor server
+		 Root Path: /home/.../web/.../public_html/....  (this is put under wordpress package)
+		 user name: name for server
 		 password: name for password
 		 mappings: deployment path:/
 	4. Tools->Deployment->options->ctrl+s/upload external changes
