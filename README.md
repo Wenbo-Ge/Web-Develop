@@ -1314,7 +1314,7 @@
 				<li class="col-lg-4"><a href="#demos_section" class="anchor_link"><div><span>Demos & Projects</span></div></a></li>
 
 	$( ".anchor_link" ).click(function( event ) {
-		    event.preventDefault();
+		    event.preventDefault(); //Prevent a link from opening the URL
 		    $("html, body").animate({ scrollTop: $($(this).attr("href")).offset().top }, 500);
 		});
 	
