@@ -1879,6 +1879,7 @@
 	https://angular.io/
 	https://www.bilibili.com/video/av16953560/?p=3
 	https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e	
+	https://angular-templates.io/tutorials/about/learn-angular-from-scratch-step-by-step
 	
 # drupal
 	https://www.drupal.org/
