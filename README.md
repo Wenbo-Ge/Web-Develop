@@ -1880,6 +1880,7 @@
 	https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e	
 	https://angular-templates.io/tutorials/about/learn-angular-from-scratch-step-by-step
 	https://angular.io/guide/displaying-data
+	https://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
 	
 # drupal
 	https://www.drupal.org/
