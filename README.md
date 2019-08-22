@@ -1881,6 +1881,7 @@
 	https://angular-templates.io/tutorials/about/learn-angular-from-scratch-step-by-step
 	https://angular.io/guide/displaying-data
 	https://jasonwatmore.com/post/2018/10/29/angular-7-user-registration-and-login-example-tutorial
+	https://www.madewithangular.com/
 	
 # drupal
 	https://www.drupal.org/
