@@ -1889,6 +1889,7 @@
 	https://www.drupal.org/docs/8/mobile/native-mobile-application-development
 	
 # python
+	https://www.practicepython.org/
 	
 	
 	
