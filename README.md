@@ -323,7 +323,7 @@
 	
 # CSS correct target:
 	use dev tool to hover the class,
-	div.class name.class name use space next level.class name
+	refer to https://www.w3schools.com/cssref/css_selectors.asp
 	
 # duplicated meta descriptions and titles
 	at seo -> add %%page%% at description and title will solve this problem
