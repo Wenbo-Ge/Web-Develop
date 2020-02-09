@@ -1962,3 +1962,7 @@
 	2. cd backup
 	3. ls
 	4. sudo rm -r *
+	
+# reset database when database connection is lost!!!!!!!!!!!!!!!!!!!!!!!
+	https://forum.vestacp.com/viewtopic.php?t=13363
+	!!!try restart database server
