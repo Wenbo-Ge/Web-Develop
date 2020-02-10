@@ -1910,7 +1910,9 @@
 	3. Menu: Tools->Deployment->configuration,
 		 type SFTP,
 		 SFTP host: server ip, port:22
-		 Root Path: /home/.../web/.../public_html/....  (this is put under wordpress package)
+		 Root Path: parent folder of current root folder on local phpstorm editor.
+		 		for example: in phpstorm, current root folder is local/public_html
+					     root path in server should be /home/admin/web/wenboge.ca
 		 user name: name for server
 		 password: name for password
 		 mappings: deployment path:/
