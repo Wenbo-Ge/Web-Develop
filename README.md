@@ -1859,6 +1859,9 @@
 # how to increase upload limits
 	https://www.hostinger.com/tutorials/fix-the-uploaded-file-exceeds-the-upload-max-filesize-directive-in-php-ini-	wordpress
 	
+# difference between .value and .innerhtml in javascript.
+	https://superuser.com/questions/1037389/innerhtml-vs-value-when-and-why
+
 # good plugin for wordpress template:
 
 	revolution slider
