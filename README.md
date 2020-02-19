@@ -1838,6 +1838,9 @@
     ?>
 	to retrieve different css stylesheet for different page
 
+# php function return issue
+	
+	if function has a return, return ($variable); need bracket
 	
 # JS: Uncaught TypeError: Cannot read property 'add' of null
 	js was triggered twice for same class name:
