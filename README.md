@@ -1842,6 +1842,9 @@
 	
 	if function has a return, return ($variable); need bracket
 	
+# php passing by reference
+	https://www.geeksforgeeks.org/how-to-pass-php-variables-by-reference/
+	
 # JS: Uncaught TypeError: Cannot read property 'add' of null
 	js was triggered twice for same class name:
 	solution: remove extra call for same class name in JS
