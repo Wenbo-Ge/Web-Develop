@@ -1850,6 +1850,15 @@
 	solution: remove extra call for same class name in JS
 	https://github.com/kenwheeler/slick/issues/1953
 	
+# head tag can only includes following:
+	<title> (this element is required in an HTML document)
+	<style>
+	<base>
+	<link>
+	<meta>
+	<script>
+	<noscript>
+	
 # Typing annimation js:
 	https://codepen.io/davinci/pen/MKmmrB
 
