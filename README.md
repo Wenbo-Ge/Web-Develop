@@ -1986,3 +1986,6 @@
 # reset database when database connection is lost!!!!!!!!!!!!!!!!!!!!!!!
 	https://forum.vestacp.com/viewtopic.php?t=13363
 	!!!try restart database server
+	a. ssh admin@serverip
+	b. sudo stop sql
+	C. sudo restart sql
