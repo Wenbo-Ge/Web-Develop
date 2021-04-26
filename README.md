@@ -1987,5 +1987,5 @@
 	https://forum.vestacp.com/viewtopic.php?t=13363
 	!!!try restart database server
 	a. ssh admin@serverip
-	b. sudo stop sql
-	C. sudo restart sql
+	b. sudo systemctl stop mysql
+	C. sudo systemctl restart mysql
