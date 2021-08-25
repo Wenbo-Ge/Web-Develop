@@ -1989,3 +1989,7 @@
 	a. ssh admin@serverip
 	b. sudo systemctl stop mysql
 	C. sudo systemctl restart mysql
+	
+	
+# Drupal
+
