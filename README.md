@@ -1991,5 +1991,9 @@
 	C. sudo systemctl restart mysql
 	
 	
-# Drupal
-
+# Drupal with Storybook
+	1. Follow this link https://medium.com/@askibinski/integrating-storybook-with-drupal-ddabfc6c2f9d to make storybook running 
+	   with drupal twig template without any CSS and JS
+	2. Integrate Tailwind CSS with storybook, go to https://tailwindcss.com/docs/installation, follow the instructions, 
+	   but mannually create postcss.config.js and tailwind.config.js under the root of the the theme project
+	3. Integrate Alpine JS with storybook, go to https://alpinejs.dev/essentials/installation, follow the instructions.
