@@ -1997,3 +1997,7 @@
 	2. Integrate Tailwind CSS with storybook, go to https://tailwindcss.com/docs/installation, follow the instructions, 
 	   but mannually create postcss.config.js and tailwind.config.js under the root of the the theme project
 	3. Integrate Alpine JS with storybook, go to https://alpinejs.dev/essentials/installation, follow the instructions.
+
+# Drupal Sync (import and export)
+	code base changes in /web/sites/default/config/ need to run drush cim to sync to drupal
+	drupal changes in admin panel need to run drush cex to sync to code base
