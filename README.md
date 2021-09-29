@@ -2001,3 +2001,19 @@
 # Drupal Sync (import and export)
 	code base changes in /web/sites/default/config/ need to run drush cim to sync to drupal
 	drupal changes in admin panel need to run drush cex to sync to code base
+
+# YML with twig
+	YML is written as follow:
+	keys: 
+	  obj1: obj1Value
+	  obj2: 
+	    - arrayValue1 
+	    - arrayValue2
+	    
+	twig calls as follow:
+	{% if keys|length != 0 %}
+		keys.obj1 -- will render obj1Value
+		{% for key in keys.obj2 %}
+            		{{ key }} -- will render values in obj2 array
+        	{% endfor %}
+	{% endif %}
