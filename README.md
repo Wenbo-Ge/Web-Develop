@@ -2018,6 +2018,24 @@
         	{% endfor %}
 	{% endif %}
 	
-	
+# Make pdf in drupal open in new tab
+	1. Use global js
+		(function ($) {
+		    $(document).ready(function() {
+			// Open PDF In New Window
+			$('a[href$=".pdf"]').attr('target', '_blank');
+		    });
+
+		}(jQuery));
+	2. Alternatively, you can also solve this via preprocess.
+
+		mytheme.theme
+
+		/**
+		 * Implements hook_preprocess_HOOK().
+		 */
+		function mytheme_preprocess_file_link(&$variables) {
+		  $variables['link']['#url']->setOption('attributes', ['target' => '_blank']);
+		}
 # Good css library and JS library
 
