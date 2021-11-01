@@ -2037,5 +2037,21 @@
 		function mytheme_preprocess_file_link(&$variables) {
 		  $variables['link']['#url']->setOption('attributes', ['target' => '_blank']);
 		}
+		
+# Drupal Kint
+	use kint to inspect array in twig:
+		{% set faqs = [] %}
+		{% set faqs = faqs|merge(
+		      [
+			{
+			  "a": "sss",
+			  "b": "bbb"
+			}
+		      ]
+		    ) %}
+		    
+		{{ kint(faqs) }} or 
+		{{ kint(faqs[0]) }} or
+		{{ kint(faqs[0].a) }}
 # Good css library and JS library
 tailwind css and apline js
