@@ -2038,4 +2038,4 @@
 		  $variables['link']['#url']->setOption('attributes', ['target' => '_blank']);
 		}
 # Good css library and JS library
-
+tailwind css and apline js
