@@ -2053,5 +2053,11 @@
 		{{ kint(faqs) }} or 
 		{{ kint(faqs[0]) }} or
 		{{ kint(faqs[0].a) }}
+		
+# striptags
+	The striptags filter strips SGML/XML tags and replace adjacent whitespace by one space:
+
+	{{ some_html|striptags }}
+
 # Good css library and JS library
 tailwind css and apline js
