@@ -2061,3 +2061,5 @@
 
 # Good css library and JS library
 tailwind css and apline js
+
+# Docsify to generate documentation
