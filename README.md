@@ -2063,3 +2063,7 @@
 tailwind css and apline js
 
 # Docsify to generate documentation
+
+# Pipline failed issue
+	1. downgrage node version
+	2. add configure to ci/cd or package.json https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-envelope-routinesunsupported
