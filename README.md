@@ -2070,3 +2070,6 @@ tailwind css and apline js
 	
 # twig to get custome theme dir
 	https://drupal.stackexchange.com/questions/184148/get-path-to-theme-assets-in-twig-template
+	
+# Revert a commit (revert a mistaken push )
+	https://www.atlassian.com/git/tutorials/undoing-changes/git-revert
