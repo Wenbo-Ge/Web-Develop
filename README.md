@@ -2073,3 +2073,8 @@ tailwind css and apline js
 	
 # Revert a commit (revert a mistaken push )
 	https://www.atlassian.com/git/tutorials/undoing-changes/git-revert
+	
+# drupal reinstall the drupal
+	To reset your site:
+	http://dribbit.eu/drupal-8/reinstall-drupal-8
+	https://drupal.stackexchange.com/questions/134996/how-to-drop-all-mysql-tables-using-drush
