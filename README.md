@@ -2078,3 +2078,11 @@ tailwind css and apline js
 	To reset your site:
 	http://dribbit.eu/drupal-8/reinstall-drupal-8
 	https://drupal.stackexchange.com/questions/134996/how-to-drop-all-mysql-tables-using-drush
+	
+# how to intergrate play.tailwindcss to the project
+	1.Go to https://github.com/tailwindlabs/play.tailwindcss.com
+	2. Save the code base
+	3. create the folder under the project, and put everyhing into the folder.
+	4. run npm install
+	5. run npm run dev
+	6. Open http://localhost:3000
