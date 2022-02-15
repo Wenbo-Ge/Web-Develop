@@ -2086,3 +2086,8 @@ tailwind css and apline js
 	4. run npm install
 	5. run npm run dev
 	6. Open http://localhost:3000
+	
+# How to display all table names in MariaDB by using Drush
+	1. Run drush sql-cli
+	2. Run show tables; to show all table names.
+	3. Run show columns from [table_name]; to show columns in the table
