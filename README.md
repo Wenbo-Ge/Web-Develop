@@ -2060,9 +2060,10 @@
 	{{ some_html|striptags }}
 
 # Good css library and JS library
-tailwind css and apline js
+	tailwind css and apline js
 
 # Docsify to generate documentation
+	https://docsify.js.org/#/quickstart
 
 # Pipline failed issue
 	1. downgrage node version
